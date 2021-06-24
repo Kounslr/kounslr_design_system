@@ -2,10 +2,10 @@ import 'package:canton_design_system/canton_design_system.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CantonApp extends StatelessWidget {
-  final String title;
-  final Widget home;
-  final Color primaryLightColor;
-  final Color primaryDarkColor;
+  final String? title;
+  final Widget? home;
+  final Color? primaryLightColor;
+  final Color? primaryDarkColor;
   final Color primaryLightVariantColor;
   final Color primaryDarkVariantColor;
 
@@ -23,7 +23,7 @@ class CantonApp extends StatelessWidget {
       final repo = watch(themeProvider);
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: title,
+        title: title!,
         themeMode: repo.themeMode,
         theme: cantonLightTheme().copyWith(
           primaryColor: primaryLightColor,
@@ -39,6 +39,6 @@ class CantonApp extends StatelessWidget {
         ),
         home: home,
       );
-    });
+    } as Widget Function(BuildContext, T Function<T>(ProviderBase<Object?, T>), Widget?));
   }
 }

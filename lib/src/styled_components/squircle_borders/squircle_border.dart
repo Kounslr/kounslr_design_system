@@ -2,7 +2,7 @@ import '../../../canton_design_system.dart';
 
 class SquircleBorder extends ShapeBorder {
   final BorderSide side;
-  final BorderRadius radius;
+  final BorderRadius? radius;
 
   const SquircleBorder({
     this.side: BorderSide.none,
@@ -26,16 +26,16 @@ class SquircleBorder extends ShapeBorder {
   }
 
   @override
-  Path getInnerPath(Rect rect, {TextDirection textDirection}) {
+  Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
     return _squirclePath(rect.deflate(side.width), radius);
   }
 
   @override
-  Path getOuterPath(Rect rect, {TextDirection textDirection}) {
+  Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
     return _squirclePath(rect, radius);
   }
 
-  static Path _squirclePath(Rect rect, BorderRadius radius) {
+  static Path _squirclePath(Rect rect, BorderRadius? radius) {
     final c = rect.center;
     double startX = rect.left;
     double endX = rect.right;
@@ -118,7 +118,7 @@ class SquircleBorder extends ShapeBorder {
   }
 
   @override
-  void paint(Canvas canvas, Rect rect, {TextDirection textDirection}) {
+  void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {
     switch (side.style) {
       case BorderStyle.none:
         break;

@@ -11,7 +11,7 @@ class CantonMethods {
         context,
         PageTransition(
           child: view,
-          type: PageTransitionType.slideInLeft,
+          type: PageTransitionType.rightToLeft,
           curve: Curves.ease,
           duration: Duration(milliseconds: 300),
         ),

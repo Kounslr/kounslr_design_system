@@ -26,10 +26,10 @@ class CantonExpansionTile extends StatefulWidget {
   /// the tile to reveal or hide the [children]. The [initiallyExpanded] property must
   /// be non-null.
   const CantonExpansionTile({
-    Key key,
+    Key? key,
     this.headerBackgroundColor,
     this.leading,
-    @required this.title,
+    required this.title,
     this.backgroundColor,
     this.iconColor,
     this.onExpansionChanged,
@@ -43,7 +43,7 @@ class CantonExpansionTile extends StatefulWidget {
   /// A widget to display before the title.
   ///
   /// Typically a [CircleAvatar] widget.
-  final Widget leading;
+  final Widget? leading;
 
   /// The primary content of the list item.
   ///
@@ -55,7 +55,7 @@ class CantonExpansionTile extends StatefulWidget {
   /// When the tile starts expanding, this function is called with the value
   /// true. When the tile starts collapsing, this function is called with
   /// the value false.
-  final ValueChanged<bool> onExpansionChanged;
+  final ValueChanged<bool>? onExpansionChanged;
 
   /// The widgets that are displayed when the tile expands.
   ///
@@ -63,21 +63,21 @@ class CantonExpansionTile extends StatefulWidget {
   final List<Widget> children;
 
   /// The color to display behind the sublist when expanded.
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   /// The color to display the background of the header.
-  final Color headerBackgroundColor;
+  final Color? headerBackgroundColor;
 
   /// The color to display the icon of the header.
-  final Color iconColor;
+  final Color? iconColor;
 
   /// A widget to display instead of a rotating arrow icon.
-  final Widget trailing;
+  final Widget? trailing;
 
   /// Specifies if the list tile is initially expanded (true) or collapsed (false, the default).
   final bool initiallyExpanded;
 
-  final EdgeInsetsGeometry childrenPadding;
+  final EdgeInsetsGeometry? childrenPadding;
 
   @override
   _CantonExpansionTileState createState() => _CantonExpansionTileState();
@@ -97,12 +97,12 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-  AnimationController _controller;
-  Animation<double> _iconTurns;
-  Animation<double> _heightFactor;
-  Animation<Color> _headerColor;
-  Animation<Color> _iconColor;
-  Animation<Color> _backgroundColor;
+  late AnimationController _controller;
+  late Animation<double> _iconTurns;
+  late Animation<double> _heightFactor;
+  late Animation<Color?> _headerColor;
+  late Animation<Color?> _iconColor;
+  late Animation<Color?> _backgroundColor;
 
   bool _isExpanded = false;
 
@@ -144,11 +144,11 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
       PageStorage.of(context)?.writeState(context, _isExpanded);
     });
     if (widget.onExpansionChanged != null)
-      widget.onExpansionChanged(_isExpanded);
+      widget.onExpansionChanged!(_isExpanded);
   }
 
-  Widget _buildChildren(BuildContext context, Widget child) {
-    final Color titleColor = _headerColor.value;
+  Widget _buildChildren(BuildContext context, Widget? child) {
+    final Color? titleColor = _headerColor.value;
 
     return Container(
       margin: widget.childrenPadding,
@@ -175,7 +175,7 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
                 title: DefaultTextStyle(
                   style: Theme.of(context)
                       .textTheme
-                      .headline6
+                      .headline6!
                       .copyWith(color: titleColor),
                   child: widget.title,
                 ),
@@ -206,7 +206,7 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
     final ThemeData theme = Theme.of(context);
     _borderColorTween..end = theme.dividerColor;
     _headerColorTween
-      ..begin = theme.textTheme.subhead.color
+      ..begin = theme.textTheme.subhead!.color
       ..end = theme.accentColor;
     _iconColorTween
       ..begin = theme.unselectedWidgetColor

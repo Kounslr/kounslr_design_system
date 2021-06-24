@@ -186,14 +186,14 @@ class CantonDarkColors {
   static var colorScheme = ColorScheme.dark(
     /// My favorite color :)
     primary: blue,
-    primaryVariant: blue[400],
+    primaryVariant: blue[400]!,
     secondary: const Color(0xff050505),
-    secondaryVariant: gray[300],
+    secondaryVariant: gray[300]!,
     background: bgPrimary,
-    surface: yellow[300],
+    surface: yellow[300]!,
     error: red,
     onPrimary: white,
-    onSecondary: gray[200],
+    onSecondary: gray[200]!,
     onBackground: black,
     onSurface: const Color(0xFF3c1e00),
     onError: const Color(0xff400102),

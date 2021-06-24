@@ -2,18 +2,18 @@ import 'package:canton_design_system/canton_design_system.dart';
 
 class CantonHeaderButton extends StatelessWidget {
   const CantonHeaderButton({
-    Key key,
+    Key? key,
     this.backgroundColor,
     this.icon,
     this.onPressed,
     this.radius,
     this.size,
   }) : super(key: key);
-  final void Function() onPressed;
-  final Widget icon;
-  final Color backgroundColor;
-  final BorderRadius radius;
-  final double size;
+  final void Function()? onPressed;
+  final Widget? icon;
+  final Color? backgroundColor;
+  final BorderRadius? radius;
+  final double? size;
 
   @override
   Widget build(BuildContext context) {

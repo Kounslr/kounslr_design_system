@@ -52,7 +52,7 @@ ThemeData cantonDarkTheme() {
       focusedBorder: SquircleInputBorder(
         radius: BorderRadius.all(Radius.circular(35)),
         side: BorderSide(
-          color: CantonDarkColors.gray[400],
+          color: CantonDarkColors.gray[400]!,
           width: 1.5,
         ),
       ),

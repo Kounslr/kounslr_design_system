@@ -3,7 +3,7 @@ import 'squircle_border.dart';
 
 class SquircleInputBorder extends InputBorder {
   final BorderSide side;
-  final BorderRadius radius;
+  final BorderRadius? radius;
 
   @override
   bool get isOutline => true;
@@ -15,7 +15,7 @@ class SquircleInputBorder extends InputBorder {
 
   @override
   OutlineInputBorder copyWith({
-    BorderSide borderSide,
+    BorderSide? borderSide,
   }) {
     return OutlineInputBorder(
       borderSide: borderSide ?? this.borderSide,
@@ -34,16 +34,16 @@ class SquircleInputBorder extends InputBorder {
   }
 
   @override
-  Path getInnerPath(Rect rect, {TextDirection textDirection}) {
+  Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
     return _squirclePath(rect.deflate(side.width), radius);
   }
 
   @override
-  Path getOuterPath(Rect rect, {TextDirection textDirection}) {
+  Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
     return _squirclePath(rect, radius);
   }
 
-  static Path _squirclePath(Rect rect, BorderRadius radius) {
+  static Path _squirclePath(Rect rect, BorderRadius? radius) {
     final c = rect.center;
     double startX = rect.left;
     double endX = rect.right;
@@ -125,10 +125,10 @@ class SquircleInputBorder extends InputBorder {
 
   @override
   void paint(Canvas canvas, Rect rect,
-      {double gapStart,
+      {double? gapStart,
       double gapExtent = 0.0,
       double gapPercentage = 0.0,
-      TextDirection textDirection}) {
+      TextDirection? textDirection}) {
     switch (side.style) {
       case BorderStyle.none:
         break;

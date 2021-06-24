@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 class Item {
-  String label;
-  String symbol;
-  String id;
-  bool boxTwo;
-  int color;
+  String? label;
+  String? symbol;
+  String? id;
+  bool? boxTwo;
+  int? color;
 
   Item({
     this.label,
@@ -36,11 +36,11 @@ class Item {
   });
 
   Item copyWith({
-    String label,
-    String symbol,
-    String id,
-    bool boxTwo,
-    int color,
+    String? label,
+    String? symbol,
+    String? id,
+    bool? boxTwo,
+    int? color,
   }) {
     return Item(
       label: label ?? this.label,

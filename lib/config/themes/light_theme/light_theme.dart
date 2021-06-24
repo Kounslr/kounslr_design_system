@@ -43,7 +43,7 @@ ThemeData cantonLightTheme() {
       errorBorder: SquircleInputBorder(
         radius: BorderRadius.all(Radius.circular(35)),
         side: BorderSide(
-          color: CantonColors.bgDangerInverse,
+          color: CantonColors.bgDangerInverse!,
           width: 1.5,
         ),
       ),
@@ -57,7 +57,7 @@ ThemeData cantonLightTheme() {
       focusedErrorBorder: SquircleInputBorder(
         radius: BorderRadius.all(Radius.circular(35)),
         side: BorderSide(
-          color: CantonColors.bgDangerInverse,
+          color: CantonColors.bgDangerInverse!,
           width: 1.5,
         ),
       ),
@@ -98,7 +98,7 @@ ThemeData cantonLightTheme() {
         radius: BorderRadius.circular(35),
         side: BorderSide(
           width: 1.5,
-          color: CantonColors.gray[200],
+          color: CantonColors.gray[200]!,
         ),
       ),
       elevation: 0.0,

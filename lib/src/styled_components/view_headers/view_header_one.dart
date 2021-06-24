@@ -1,8 +1,8 @@
 import 'package:canton_design_system/canton_design_system.dart';
 
 class ViewHeaderOne extends StatelessWidget {
-  final String title;
-  final Widget button;
+  final String? title;
+  final Widget? button;
 
   const ViewHeaderOne({this.title, this.button});
 
@@ -11,8 +11,8 @@ class ViewHeaderOne extends StatelessWidget {
     return Row(
       children: [
         Text(
-          title,
-          style: Theme.of(context).textTheme.headline3.copyWith(
+          title!,
+          style: Theme.of(context).textTheme.headline3!.copyWith(
                 color: Theme.of(context).primaryColor,
               ),
         ),

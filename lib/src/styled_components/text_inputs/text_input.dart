@@ -1,20 +1,20 @@
 import 'package:canton_design_system/canton_design_system.dart';
 
 class CantonTextInput extends StatelessWidget {
-  final TextInputType textInputType;
-  final String hintText, labelText;
-  final Widget prefixIcon, suffixIcon;
-  final FocusNode focusNode;
-  final bool obscureText, isTextFormField;
-  final InputDecoration inputDecoration;
-  final TextEditingController controller;
-  final ValueChanged<String> onChanged;
-  final double containerWidth;
-  final int maxLines;
-  final EdgeInsets containerPadding;
-  final BorderRadius radius;
-  final BorderSide border;
-  final Color containerColor;
+  final TextInputType? textInputType;
+  final String? hintText, labelText;
+  final Widget? prefixIcon, suffixIcon;
+  final FocusNode? focusNode;
+  final bool? obscureText, isTextFormField;
+  final InputDecoration? inputDecoration;
+  final TextEditingController? controller;
+  final ValueChanged<String>? onChanged;
+  final double? containerWidth;
+  final int? maxLines;
+  final EdgeInsets? containerPadding;
+  final BorderRadius? radius;
+  final BorderSide? border;
+  final Color? containerColor;
 
   const CantonTextInput({
     this.textInputType,
@@ -37,23 +37,23 @@ class CantonTextInput extends StatelessWidget {
   });
 
   CantonTextInput copyWith({
-    TextInputType textInputType,
-    String hintText,
-    String labelText,
-    Widget prefixIcon,
-    Widget suffixIcon,
-    FocusNode focusNode,
-    bool obscureText,
-    bool isTextFormField,
-    InputDecoration inputDecoration,
-    TextEditingController controller,
-    ValueChanged<String> onChanged,
-    double containerWidth,
-    int maxLines,
-    EdgeInsets containerPadding,
-    BorderRadius radius,
-    BorderSide border,
-    Color containerColor,
+    TextInputType? textInputType,
+    String? hintText,
+    String? labelText,
+    Widget? prefixIcon,
+    Widget? suffixIcon,
+    FocusNode? focusNode,
+    bool? obscureText,
+    bool? isTextFormField,
+    InputDecoration? inputDecoration,
+    TextEditingController? controller,
+    ValueChanged<String>? onChanged,
+    double? containerWidth,
+    int? maxLines,
+    EdgeInsets? containerPadding,
+    BorderRadius? radius,
+    BorderSide? border,
+    Color? containerColor,
   }) {
     return CantonTextInput(
       obscureText: obscureText ?? this.obscureText,
@@ -85,7 +85,7 @@ class CantonTextInput extends StatelessWidget {
         return Column(
           children: [
             Text(
-              labelText,
+              labelText!,
               style: Theme.of(context).inputDecorationTheme.labelStyle,
             ),
             SizedBox(height: 7.0),
@@ -96,7 +96,7 @@ class CantonTextInput extends StatelessWidget {
       }
     }
 
-    Widget _prefixIconWidget() {
+    Widget? _prefixIconWidget() {
       if (prefixIcon != null) {
         return Padding(
           padding: containerPadding ?? const EdgeInsets.all(19),
@@ -107,7 +107,7 @@ class CantonTextInput extends StatelessWidget {
       }
     }
 
-    Widget _suffixIconWidget() {
+    Widget? _suffixIconWidget() {
       if (suffixIcon != null) {
         return Padding(
           padding: containerPadding ?? const EdgeInsets.all(19),
@@ -120,7 +120,7 @@ class CantonTextInput extends StatelessWidget {
 
     Widget _textInputFormField() {
       return TextFormField(
-        obscureText: obscureText,
+        obscureText: obscureText!,
         controller: controller,
         onChanged: onChanged,
         focusNode: focusNode,
@@ -194,7 +194,7 @@ class CantonTextInput extends StatelessWidget {
     }
 
     Widget textInput() {
-      if (isTextFormField) {
+      if (isTextFormField!) {
         return Padding(
           padding:
               EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),

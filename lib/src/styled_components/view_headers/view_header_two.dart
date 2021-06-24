@@ -1,12 +1,12 @@
 import 'package:canton_design_system/canton_design_system.dart';
 
 class ViewHeaderTwo extends StatelessWidget {
-  final String title;
-  final bool backButton;
-  final bool isBackButtonClear;
-  final Widget buttonOne;
-  final Widget buttonTwo;
-  final void Function() backButtonFunction;
+  final String? title;
+  final bool? backButton;
+  final bool? isBackButtonClear;
+  final Widget? buttonOne;
+  final Widget? buttonTwo;
+  final void Function()? backButtonFunction;
   const ViewHeaderTwo(
       {this.title,
       this.backButton,
@@ -25,17 +25,17 @@ class ViewHeaderTwo extends StatelessWidget {
                 isClear: isBackButtonClear ?? true,
                 onPressed: () {
                   backButtonFunction != null
-                      ? backButtonFunction()
+                      ? backButtonFunction!()
                       : DoNothingAction();
                   Navigator.pop(context);
                 },
               )
-            : buttonOne,
+            : buttonOne!,
         Text(
-          title,
+          title!,
           style: Theme.of(context)
               .textTheme
-              .headline5
+              .headline5!
               .copyWith(color: Theme.of(context).primaryColor),
         ),
         buttonTwo ??

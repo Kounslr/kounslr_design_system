@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 class CantonActionButton extends StatelessWidget {
   final Widget icon;
-  final Color iconColor;
-  final double iconSize, containerWidth, containerHeight;
+  final Color? iconColor;
+  final double? iconSize, containerWidth, containerHeight;
   final void Function() onPressed;
 
   const CantonActionButton({
-    @required this.icon,
-    @required this.onPressed,
+    required this.icon,
+    required this.onPressed,
     this.iconColor,
     this.containerWidth,
     this.containerHeight,

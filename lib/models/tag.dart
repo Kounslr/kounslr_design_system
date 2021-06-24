@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 class Tag {
-  String name;
+  String? name;
   Tag({
     this.name,
   });
 
   Tag copyWith({
-    String name,
+    String? name,
   }) {
     return Tag(
       name: name ?? this.name,

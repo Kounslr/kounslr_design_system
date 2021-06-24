@@ -133,70 +133,70 @@ class CantonColors {
 
   /// Text Colors [Grays]
   static Color textPrimary = gray;
-  static Color textSecondary = gray[700];
-  static Color textTertiary = gray[600];
-  static Color textPlaceholder = gray[600];
-  static Color textDisabled = gray[500];
+  static Color? textSecondary = gray[700];
+  static Color? textTertiary = gray[600];
+  static Color? textPlaceholder = gray[600];
+  static Color? textDisabled = gray[500];
 
   /// Text Colors [Other]
-  static Color textLink = blue[600];
-  static Color textDanger = red[700];
-  static Color textSuccess = green[700];
-  static Color textWarning = yellow[900];
+  static Color? textLink = blue[600];
+  static Color? textDanger = red[700];
+  static Color? textSuccess = green[700];
+  static Color? textWarning = yellow[900];
 
   /// Icon Colors
   static Color iconPrimary = gray;
-  static Color iconSecondary = gray[700];
-  static Color iconTertiary = gray[600];
-  static Color iconInfo = blue[600];
-  static Color iconDanger = red[600];
-  static Color iconSuccess = green[700];
-  static Color iconWarning = yellow[900];
+  static Color? iconSecondary = gray[700];
+  static Color? iconTertiary = gray[600];
+  static Color? iconInfo = blue[600];
+  static Color? iconDanger = red[600];
+  static Color? iconSuccess = green[700];
+  static Color? iconWarning = yellow[900];
 
   /// Border Colors
-  static Color borderPrimary = gray[200];
+  static Color? borderPrimary = gray[200];
   static Color borderSecondary = Color(0xFFeaecef);
-  static Color borderTertiary = gray[200];
-  static Color borderOverlay = gray[300];
+  static Color? borderTertiary = gray[200];
+  static Color? borderOverlay = gray[300];
   static Color borderInverse = white;
-  static Color borderInfo = blue[600];
-  static Color borderDanger = red[600];
-  static Color borderSuccess = green[500];
-  static Color borderWarning = yellow[700];
+  static Color? borderInfo = blue[600];
+  static Color? borderDanger = red[600];
+  static Color? borderSuccess = green[500];
+  static Color? borderWarning = yellow[700];
 
   /// Background Colors
   static Color bgCanvas = white;
   static Color bgCanvasMobile = white;
   static Color bgInverse = gray;
-  static Color bgInset = gray[200];
+  static Color? bgInset = gray[200];
   static Color bgPrimary = white;
-  static Color bgSecondary = gray[100];
-  static Color bgTertiary = gray[200];
+  static Color? bgSecondary = gray[100];
+  static Color? bgTertiary = gray[200];
   static Color bgOverlay = white;
   static Color bgBackdrop = Color.fromRGBO(27, 31, 35, 0.5);
   static Color bgInfo = Color(0xFFf1f8ff);
-  static Color bgInfoInverse = blue[600];
+  static Color? bgInfoInverse = blue[600];
   static Color bgDanger = Color(0xFFffeef0);
-  static Color bgDangerInverse = red[600];
+  static Color? bgDangerInverse = red[600];
   static Color bgSuccess = Color(0xFFdcffe4);
-  static Color bgSuccessInverse = green[600];
+  static Color? bgSuccessInverse = green[600];
   static Color bgWarning = Color(0xFFfff5b1);
-  static Color bgWarningInverse = yellow[500];
+  static Color? bgWarningInverse = yellow[500];
 
   static var colorScheme = ColorScheme.light(
     /// My favorite color :)
     primary: blue,
-    primaryVariant: blue[400],
-    secondary: gray[300],
-    secondaryVariant: gray[700],
+    primaryVariant: blue[400]!,
+    secondary: gray[300]!,
+    secondaryVariant: gray[700]!,
     background: bgPrimary,
     surface: yellow,
-    error: red[700],
+    error: red[700]!,
     onPrimary: white,
-    onSecondary: gray[200],
+    onSecondary: gray[200]!,
     onBackground: black,
-    onSurface: yellow[100],
-    onError: red[100],
+    onSurface: yellow[100]!,
+    onError: red[100]!,
   );
 }
 

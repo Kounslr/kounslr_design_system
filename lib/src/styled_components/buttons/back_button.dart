@@ -2,8 +2,8 @@ import 'package:canton_design_system/src/styled_components/buttons/primary_butto
 import '../../../canton_design_system.dart';
 
 class CantonBackButton extends StatelessWidget {
-  final bool isClear;
-  final void Function() onPressed;
+  final bool? isClear;
+  final void Function()? onPressed;
   const CantonBackButton({this.isClear, this.onPressed});
 
   @override

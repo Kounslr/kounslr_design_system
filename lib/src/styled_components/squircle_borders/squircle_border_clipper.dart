@@ -1,10 +1,10 @@
 import 'package:canton_design_system/canton_design_system.dart';
 
 class ClipSquircleBorder extends StatelessWidget {
-  const ClipSquircleBorder({Key key, this.radius, this.child})
+  const ClipSquircleBorder({Key? key, this.radius, this.child})
       : super(key: key);
-  final Widget child;
-  final BorderRadius radius;
+  final Widget? child;
+  final BorderRadius? radius;
 
   @override
   Widget build(BuildContext context) {
