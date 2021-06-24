@@ -5,23 +5,20 @@ author: Carlton Aikins
 homepage:
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_page_transition:
-  flutter_riverpod:
-  flutter_slidable:
-  flutter_feather_icons:
-  flutter_spinkit:
-  flutter_svg:
-  emojis:
-  circular_check_box:
-  cupertino_icons:
-  liquid_pull_to_refresh:
-  keyboard_visibility:
+  flutter_riverpod: ^0.14.0+3
+  flutter_slidable: ^0.6.0
+  flutter_feather_icons: ^2.0.0+1
+  flutter_spinkit: ^5.0.0
+  flutter_svg: ^0.22.0
+  page_transition: ^2.0.2
+  liquid_pull_to_refresh: ^3.0.0
+  cupertino_icons: ^1.0.3
 
 dev_dependencies:
   flutter_test:
