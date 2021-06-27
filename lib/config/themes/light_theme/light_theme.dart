@@ -115,7 +115,6 @@ ThemeData cantonLightTheme() {
     ),
     appBarTheme: AppBarTheme(
       color: CantonColors.transparent,
-      backgroundColor: CantonColors.transparent,
       foregroundColor: CantonColors.transparent,
       textTheme: MobileTextTheme.theme(base),
       elevation: 0.0,
