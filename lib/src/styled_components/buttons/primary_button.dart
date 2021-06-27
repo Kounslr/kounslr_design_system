@@ -40,8 +40,8 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    Color? buttonColor = widget.containerColor;
-    Color tapDownShade = Color(0);
+    HSLColor _buttonColor = HSLColor.fromColor(
+        widget.containerColor ?? Theme.of(context).primaryColor);
 
     Widget? prefixIconWidget() {
       if (widget.prefixIcon != null) {
@@ -79,38 +79,45 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> {
 
     return GestureDetector(
       onTapDown: (_) => widget.enabled
-          ? setState(() => tapDownShade = CantonColors.black.withOpacity(0.5))
-          : null,
-      onTapUp: widget.enabled
-          ? (_) {
-              widget.onPressed();
-              setState(() => tapDownShade = Color(0));
-            }
-          : null,
-      child: Container(
-        color: tapDownShade,
-        child: Material(
-          color: widget.enabled
-              ? buttonColor
-              : Theme.of(context).colorScheme.onSecondary,
+          ? setState(() {
+              _buttonColor =
+                  _buttonColor.withLightness(_buttonColor.lightness - 0.15);
+            })
+          : DoNothingAction(),
+      onTapUp: (_) {
+        widget.enabled
+            ? setState(() => {
+                  widget.onPressed(),
+                  _buttonColor =
+                      _buttonColor.withLightness(_buttonColor.lightness + 0.15)
+                })
+            : DoNothingAction();
+      },
+      child: AnimatedContainer(
+        color: widget.enabled
+            ? _buttonColor.toColor()
+            : Theme.of(context).colorScheme.onSecondary,
+        curve: Curves.easeInOut,
+        duration: Duration(milliseconds: 200),
+        decoration: ShapeDecoration(
           shape: SquircleBorder(
             radius: widget.radius ?? BorderRadius.circular(45),
             side: widget.border ?? BorderSide.none,
           ),
-          child: Container(
-            height: widget.containerHeight ?? 65.0,
-            width: widget.containerWidth ?? size.width,
-            padding: widget.containerPadding ??
-                const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              mainAxisAlignment:
-                  widget.alignment ?? MainAxisAlignment.spaceBetween,
-              children: [
-                prefixIconWidget()!,
-                textWidget(),
-                suffixIconWidget(),
-              ],
-            ),
+        ),
+        child: Container(
+          height: widget.containerHeight ?? 65.0,
+          width: widget.containerWidth ?? size.width,
+          padding: widget.containerPadding ??
+              const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment:
+                widget.alignment ?? MainAxisAlignment.spaceBetween,
+            children: [
+              prefixIconWidget()!,
+              textWidget(),
+              suffixIconWidget(),
+            ],
           ),
         ),
       ),
