@@ -21,12 +21,12 @@ import 'package:canton_design_system/canton_design_system.dart';
 BTW ```package:flutter/material.dart``` is already imported when using this package so no need to re-import :)
 
 ## All Features
+- _Null Safe:_ This package supports null safety.
 - _Color system:_ Credits to the Primer Color system, as this is a modified version of theirs.
 - _Typography system:_ Credits to the Primer typography system.
 - _Buttons:_ Resizable primary button, small/header button and back button with all necessary customizations.
 - _Text Inputs:_ Custom text field, text form fields, and a tag text field.
 - _Borders:_ border customization.
-- _Color Picker(WIP):_ Working color picker that returns color.
 - _Loading icon:_ Loading icon/widget.
 - _Animations(WIP):_ Fluid animations to give a playful but professional feel.
 - _Custom Methods:_ Custom methods with ease of use.
@@ -34,22 +34,19 @@ BTW ```package:flutter/material.dart``` is already imported when using this pack
 - _Custom Fonts:_ Both serif and sans serif typefaces consisting of Inter UI and Times New Roman.
 - _Light theme:_ Clean light theme.
 - _Dark Theme:_ Clean dark theme with all elements modified.
-
-## TODO
-- [ ] Migrate to null saftey
-- [ ] Reconfigure design system on figma to use new elements
+- _Dynamic Device Theming: Accustoms to light mode and dark mode based on current device.
 
 ## Dependencies
-- flutter_page_transition: 
-- flutter_riverpod:
-- flutter_slidable:
-- flutter_feather_icons:
-- flutter_spinkit:
-- flutter_svg:
-- emojis:
-- circular_check_box:
-- liquid_pull_to_refresh:
-- cupertino_icons:
+```
+flutter_riverpod: ^0.14.0+3
+flutter_slidable: ^0.6.0
+flutter_feather_icons: ^2.0.0+1
+flutter_spinkit: ^5.0.0
+flutter_svg: ^0.22.0
+page_transition: ^2.0.2
+liquid_pull_to_refresh: ^3.0.0
+cupertino_icons: ^1.0.3
+```
 
 ## Figma
 [Link](https://www.figma.com/file/CNpY1mP3jfeAUPW3Dhf3l5/Canton-Design-System?node-id=0%3A1) to design system on figma to view UI elements
