@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:flutter/services.dart';
 
 class CantonTagTextInput extends StatefulWidget {
   ///[tagsStyler] must not be [null]
@@ -25,17 +26,25 @@ class CantonTagTextInput extends StatefulWidget {
   ///[tagsDistanceFromBorder] sets the distance of the tags from the border
   final double tagsDistanceFromBorderEnd;
 
-  const CantonTagTextInput({
-    Key? key,
-    this.tagsDistanceFromBorderEnd = 0.725,
-    this.scrollableTagsPadding = const EdgeInsets.symmetric(horizontal: 4.0),
-    this.scrollableTagsMargin,
-    this.tagsStyler,
-    this.textFieldStyler,
-    this.onTag,
-    this.onDelete,
-    this.initialTags,
-  }) : super(key: key);
+  ///The maximum amount of padding in the text field
+  final int? maxCharactersPerTag;
+
+  ///Maximum amount of tags in text field
+  final int? maxTags;
+
+  const CantonTagTextInput(
+      {Key? key,
+      this.tagsDistanceFromBorderEnd = 0.725,
+      this.scrollableTagsPadding = const EdgeInsets.symmetric(horizontal: 4.0),
+      this.scrollableTagsMargin,
+      this.tagsStyler,
+      this.textFieldStyler,
+      this.onTag,
+      this.onDelete,
+      this.initialTags,
+      this.maxCharactersPerTag,
+      this.maxTags})
+      : super(key: key);
 
   @override
   _CantonTagTextInputState createState() => _CantonTagTextInputState();
@@ -70,9 +79,19 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
     _scrollController.dispose();
   }
 
+  List<TextInputFormatter> _textInputFormatters() {
+    if (widget.maxCharactersPerTag != null) {
+      return [
+        LengthLimitingTextInputFormatter(widget.maxCharactersPerTag),
+      ];
+    } else {
+      return [];
+    }
+  }
+
   List<Widget> get _getTags {
     List<Widget> _tags = [];
-    for (var i = 0; i < _tagsStringContents!.length; i++) {
+    for (var i = 0; i < (widget.maxTags ?? _tagsStringContents!.length); i++) {
       final String stringContent = _tagsStringContents![i];
       final String stringContentWithHash =
           widget.tagsStyler!.showHashtag ? "#$stringContent" : stringContent;
@@ -136,6 +155,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
       autocorrect: false,
       cursorColor: widget.textFieldStyler!.cursorColor,
       style: widget.textFieldStyler!.textStyle,
+      inputFormatters: _textInputFormatters(),
       decoration: InputDecoration(
         contentPadding: widget.textFieldStyler!.contentPadding,
         isDense: widget.textFieldStyler!.isDense,
