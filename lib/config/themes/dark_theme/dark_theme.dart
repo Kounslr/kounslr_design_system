@@ -112,8 +112,13 @@ ThemeData cantonDarkTheme() {
     ),
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: CantonDarkColors.blue),
-    appBarTheme:
-        const AppBarTheme(color: CantonDarkColors.transparent, elevation: 0.0),
+    appBarTheme: AppBarTheme(
+      color: CantonColors.transparent,
+      backgroundColor: CantonColors.transparent,
+      foregroundColor: CantonColors.transparent,
+      textTheme: MobileTextTheme.theme(base),
+      elevation: 0.0,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: CantonDarkColors.bgCanvasMobile,
       elevation: 0.0,
