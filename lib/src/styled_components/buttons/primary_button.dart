@@ -94,31 +94,28 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> {
             : DoNothingAction();
       },
       child: AnimatedContainer(
-        color: widget.enabled
-            ? _buttonColor.toColor()
-            : Theme.of(context).colorScheme.onSecondary,
         curve: Curves.easeInOut,
         duration: Duration(milliseconds: 200),
         decoration: ShapeDecoration(
+          color: widget.enabled
+              ? _buttonColor.toColor()
+              : Theme.of(context).colorScheme.onSecondary,
           shape: SquircleBorder(
             radius: widget.radius ?? BorderRadius.circular(45),
             side: widget.border ?? BorderSide.none,
           ),
         ),
-        child: Container(
-          height: widget.containerHeight ?? 65.0,
-          width: widget.containerWidth ?? size.width,
-          padding: widget.containerPadding ??
-              const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            mainAxisAlignment:
-                widget.alignment ?? MainAxisAlignment.spaceBetween,
-            children: [
-              prefixIconWidget()!,
-              textWidget(),
-              suffixIconWidget(),
-            ],
-          ),
+        height: widget.containerHeight ?? 65.0,
+        width: widget.containerWidth ?? size.width,
+        padding: widget.containerPadding ??
+            const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          mainAxisAlignment: widget.alignment ?? MainAxisAlignment.spaceBetween,
+          children: [
+            prefixIconWidget()!,
+            textWidget(),
+            suffixIconWidget(),
+          ],
         ),
       ),
     );
