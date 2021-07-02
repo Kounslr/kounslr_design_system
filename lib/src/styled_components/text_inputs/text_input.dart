@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:flutter/services.dart';
 
 class CantonTextInput extends StatelessWidget {
   final TextInputType? textInputType;
@@ -15,6 +16,7 @@ class CantonTextInput extends StatelessWidget {
   final BorderRadius? radius;
   final BorderSide? border;
   final Color? containerColor;
+  final List<TextInputFormatter>? formatters;
 
   const CantonTextInput({
     this.textInputType,
@@ -34,6 +36,7 @@ class CantonTextInput extends StatelessWidget {
     this.controller,
     this.containerWidth,
     this.containerPadding,
+    this.formatters,
   });
 
   CantonTextInput copyWith({
@@ -54,6 +57,7 @@ class CantonTextInput extends StatelessWidget {
     BorderRadius? radius,
     BorderSide? border,
     Color? containerColor,
+    List<TextInputFormatter>? formatters,
   }) {
     return CantonTextInput(
       obscureText: obscureText ?? this.obscureText,
@@ -73,6 +77,7 @@ class CantonTextInput extends StatelessWidget {
       containerWidth: containerWidth ?? this.containerWidth,
       radius: radius ?? this.radius,
       border: border ?? this.border,
+      formatters: formatters ?? this.formatters,
     );
   }
 
@@ -126,6 +131,7 @@ class CantonTextInput extends StatelessWidget {
         focusNode: focusNode,
         maxLines: maxLines ?? 1,
         cursorColor: Theme.of(context).primaryColor,
+        inputFormatters: formatters ?? [],
         decoration: inputDecoration ??
             InputDecoration(
               /// To change height of Text Field, add contentPadding,
@@ -164,6 +170,7 @@ class CantonTextInput extends StatelessWidget {
         maxLines: maxLines ?? 1,
         focusNode: focusNode,
         cursorColor: Theme.of(context).primaryColor,
+        inputFormatters: formatters ?? [],
         decoration: inputDecoration ??
             InputDecoration(
               /// To change height of Text Field, add contentPadding,
