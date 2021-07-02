@@ -1,5 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_design_system/src/styled_components/buttons/button_animation_controller.dart';
 import 'package:flutter/material.dart';
 
 class CantonPrimaryButton extends StatelessWidget {
