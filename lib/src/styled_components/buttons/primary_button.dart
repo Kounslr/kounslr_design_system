@@ -46,7 +46,7 @@ class _CantonPrimaryButtonState
 
   void _handleTapDown(TapDownDetails details) {
     if (widget.enabled) {
-      _buttonColor = _buttonColor.withLightness(_buttonColor.lightness + 0.15);
+      _buttonColor = _buttonColor.withLightness(_buttonColor.lightness - 0.15);
       animationController.forward();
     }
   }
