@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:canton_design_system/src/styled_components/buttons/button_animation_controller.dart';
 import 'package:flutter/material.dart';
 
 class CantonPrimaryButton extends StatefulWidget {
@@ -33,15 +34,39 @@ class CantonPrimaryButton extends StatefulWidget {
   });
 
   @override
-  _CantonPrimaryButtonState createState() => _CantonPrimaryButtonState();
+  _CantonPrimaryButtonState createState() =>
+      _CantonPrimaryButtonState(Duration(milliseconds: 100));
 }
 
-class _CantonPrimaryButtonState extends State<CantonPrimaryButton> {
+class _CantonPrimaryButtonState
+    extends ButtonAnimationControllerState<CantonPrimaryButton> {
+  _CantonPrimaryButtonState(Duration duration) : super(duration);
+
+  HSLColor _buttonColor = HSLColor.fromColor(Color(0));
+
+  void _handleTapDown(TapDownDetails details) {
+    if (widget.enabled) {
+      _buttonColor = _buttonColor.withLightness(_buttonColor.lightness + 0.15);
+      animationController.forward();
+    }
+  }
+
+  void _handleTapUp(TapUpDetails details) {
+    _buttonColor = HSLColor.fromColor(widget.containerColor!);
+    animationController.reverse();
+    widget.onPressed.call();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _buttonColor = HSLColor.fromColor(widget.containerColor!);
+  }
+
   @override
   Widget build(BuildContext context) {
+    HSLColor _buttonColor = HSLColor.fromColor(widget.containerColor!);
     final Size size = MediaQuery.of(context).size;
-    HSLColor _buttonColor = HSLColor.fromColor(
-        widget.containerColor ?? Theme.of(context).primaryColor);
 
     Widget? prefixIconWidget() {
       if (widget.prefixIcon != null) {
@@ -78,46 +103,36 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> {
     }
 
     return GestureDetector(
-      onTapDown: (_) => widget.enabled
-          ? setState(() {
-              _buttonColor =
-                  _buttonColor.withLightness(_buttonColor.lightness - 0.15);
-            })
-          : DoNothingAction(),
-      onTapUp: (_) {
-        widget.enabled
-            ? setState(() => {
-                  widget.onPressed(),
-                  _buttonColor =
-                      _buttonColor.withLightness(_buttonColor.lightness + 0.15)
-                })
-            : DoNothingAction();
-      },
-      child: AnimatedContainer(
-        curve: Curves.easeInOut,
-        duration: Duration(milliseconds: 200),
-        decoration: ShapeDecoration(
-          color: widget.enabled
-              ? _buttonColor.toColor()
-              : Theme.of(context).colorScheme.onSecondary,
-          shape: SquircleBorder(
-            radius: widget.radius ?? BorderRadius.circular(45),
-            side: widget.border ?? BorderSide.none,
-          ),
-        ),
-        height: widget.containerHeight ?? 65.0,
-        width: widget.containerWidth ?? size.width,
-        padding: widget.containerPadding ??
-            const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Row(
-          mainAxisAlignment: widget.alignment ?? MainAxisAlignment.spaceBetween,
-          children: [
-            prefixIconWidget()!,
-            textWidget(),
-            suffixIconWidget(),
-          ],
-        ),
-      ),
+      onTapDown: _handleTapDown,
+      onTapUp: _handleTapUp,
+      child: AnimatedBuilder(
+          animation: animationController,
+          builder: (context, child) {
+            return Container(
+              decoration: ShapeDecoration(
+                color: widget.enabled
+                    ? _buttonColor.toColor()
+                    : Theme.of(context).colorScheme.onSecondary,
+                shape: SquircleBorder(
+                  radius: widget.radius ?? BorderRadius.circular(45),
+                  side: widget.border ?? BorderSide.none,
+                ),
+              ),
+              height: widget.containerHeight ?? 65.0,
+              width: widget.containerWidth ?? size.width,
+              padding: widget.containerPadding ??
+                  const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Row(
+                mainAxisAlignment:
+                    widget.alignment ?? MainAxisAlignment.spaceBetween,
+                children: [
+                  prefixIconWidget()!,
+                  textWidget(),
+                  suffixIconWidget(),
+                ],
+              ),
+            );
+          }),
     );
   }
 }
