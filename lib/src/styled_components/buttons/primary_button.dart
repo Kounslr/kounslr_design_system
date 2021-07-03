@@ -35,7 +35,6 @@ class CantonPrimaryButton extends StatelessWidget {
   @override
   @override
   Widget build(BuildContext context) {
-    HSLColor _buttonColor = HSLColor.fromColor(containerColor!);
     final Size size = MediaQuery.of(context).size;
 
     Widget? prefixIconWidget() {
@@ -77,8 +76,8 @@ class CantonPrimaryButton extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           color: enabled
-              ? _buttonColor.toColor()
-              : Theme.of(context).colorScheme.onSecondary,
+              ? containerColor
+              : Theme.of(context).primaryColor,
           shape: SquircleBorder(
             radius: radius ?? BorderRadius.circular(45),
             side: border ?? BorderSide.none,
