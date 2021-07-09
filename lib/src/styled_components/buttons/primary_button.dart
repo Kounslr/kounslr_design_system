@@ -83,7 +83,7 @@ class CantonPrimaryButton extends StatelessWidget {
             side: border ?? BorderSide.none,
           ),
         ),
-        height: containerHeight ?? 65.0,
+        height: containerHeight ?? 55.0,
         width: containerWidth ?? size.width,
         padding:
             containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
