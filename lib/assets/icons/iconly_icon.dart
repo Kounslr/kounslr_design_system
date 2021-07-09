@@ -10,7 +10,7 @@ class IconlyIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       path,
-      color: color ?? cantonGrey[900],
+      color: color ?? CantonColors.gray,
       width: size ?? 24,
       height: size ?? 24,
       semanticsLabel: '',

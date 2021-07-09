@@ -9,7 +9,7 @@ ThemeData cantonLightTheme() {
     textTheme: MobileTextTheme.theme(base),
     dividerTheme: DividerThemeData(
       space: 0,
-      thickness: 1,
+      thickness: 0.5,
       color: CantonColors.borderPrimary,
     ),
     iconTheme: IconThemeData(
@@ -83,13 +83,13 @@ ThemeData cantonLightTheme() {
       prefixStyle: TextStyle(
         fontSize: 17.0,
         fontWeight: FontWeight.w400,
-        color: cantonGrey,
+        color: CantonColors.colorScheme.secondaryVariant,
         height: 1.5,
       ),
       suffixStyle: TextStyle(
         fontSize: 17.0,
         fontWeight: FontWeight.w400,
-        color: CantonColors.textPrimary,
+        color: CantonColors.colorScheme.secondaryVariant,
         height: 1.5,
       ),
     ),

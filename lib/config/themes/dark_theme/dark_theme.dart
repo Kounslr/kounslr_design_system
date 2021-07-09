@@ -85,13 +85,13 @@ ThemeData cantonDarkTheme() {
       prefixStyle: TextStyle(
         fontSize: 17.0,
         fontWeight: FontWeight.w400,
-        color: cantonGrey,
+        color: CantonDarkColors.colorScheme.secondaryVariant,
         height: 1.5,
       ),
       suffixStyle: TextStyle(
         fontSize: 17.0,
         fontWeight: FontWeight.w400,
-        color: CantonDarkColors.textPrimary,
+        color: CantonDarkColors.colorScheme.secondaryVariant,
         height: 1.5,
       ),
     ),
