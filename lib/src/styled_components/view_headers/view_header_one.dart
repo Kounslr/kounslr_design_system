@@ -9,6 +9,7 @@ class ViewHeaderOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
           title!,
@@ -19,15 +20,9 @@ class ViewHeaderOne extends StatelessWidget {
         Spacer(),
         button ??
             CantonHeaderButton(
-              backgroundColor: Theme.of(context).primaryColor,
-              icon: Icon(
-                FeatherIcons.plus,
-                color: CantonColors.white,
-                size: 24,
-              ),
-              onPressed: () {
-                print('pressed');
-              },
+              backgroundColor: CantonColors.transparent,
+              icon: Container(),
+              onPressed: () {},
             ),
       ],
     );
