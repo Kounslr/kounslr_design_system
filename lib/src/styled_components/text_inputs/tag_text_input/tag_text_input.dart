@@ -91,7 +91,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
 
   List<Widget> get _getTags {
     List<Widget> _tags = [];
-    for (var i = 0; i < (widget.maxTags ?? _tagsStringContents!.length); i++) {
+    for (var i = 0; i < _tagsStringContents!.length; i++) {
       final String stringContent = _tagsStringContents![i];
       final String stringContentWithHash =
           widget.tagsStyler!.showHashtag ? "#$stringContent" : stringContent;
@@ -131,7 +131,10 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
           ],
         ),
       );
-      _tags.add(tag);
+
+      if (widget.maxTags != null) {
+        if (_tagsStringContents!.length < widget.maxTags!) _tags.add(tag);
+      }
     }
     return _tags;
   }
