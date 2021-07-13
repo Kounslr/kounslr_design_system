@@ -41,6 +41,7 @@ extension CantonStringMethods on String {
   }
 }
 
+// There could be some glitches while using this method
 extension CantonListMethods on List {
   List removeDuplicates() {
     List list = [];
