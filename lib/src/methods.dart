@@ -28,3 +28,28 @@ class CantonMethods {
     return result;
   }
 }
+
+extension CantonStringMethods on String {
+  static String addDotsToString(String string, int index) {
+    List<String> wordList = string.split(' ');
+
+    String result =
+        wordList.sublist(0, index).join(' ').replaceAll(RegExp(r' '), ' ') +
+            '...';
+
+    return result;
+  }
+}
+
+extension CantonListMethods on List {
+  static List removeDuplicates(List list) {
+    Map<String, Object> mapFilter = {};
+
+    for (var item in list) {
+      mapFilter[item.id!] = item;
+    }
+    list = mapFilter.values.toList();
+
+    return list;
+  }
+}
