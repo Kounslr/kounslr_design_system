@@ -30,7 +30,7 @@ class CantonMethods {
 }
 
 extension CantonStringMethods on String {
-  static String addDotsToString(String string, int index) {
+  String addDotsToString(String string, int index) {
     List<String> wordList = string.split(' ');
 
     String result =
@@ -42,7 +42,7 @@ extension CantonStringMethods on String {
 }
 
 extension CantonListMethods on List {
-  static List removeDuplicates(List list) {
+  List removeDuplicates(List list) {
     Map<String, Object> mapFilter = {};
 
     for (var item in list) {
