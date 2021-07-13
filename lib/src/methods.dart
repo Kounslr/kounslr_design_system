@@ -42,10 +42,11 @@ extension CantonStringMethods on String {
 }
 
 extension CantonListMethods on List {
-  List removeDuplicates(List list) {
+  List removeDuplicates() {
+    List list = [];
     Map<String, Object> mapFilter = {};
 
-    for (var item in list) {
+    for (var item in this) {
       mapFilter[item.id!] = item;
     }
     list = mapFilter.values.toList();
