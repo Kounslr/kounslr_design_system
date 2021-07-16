@@ -11,7 +11,7 @@ class SquircleInputBorder extends InputBorder {
   const SquircleInputBorder({
     this.side: BorderSide.none,
     this.radius,
-  }) : assert(side != null);
+  });
 
   @override
   OutlineInputBorder copyWith({

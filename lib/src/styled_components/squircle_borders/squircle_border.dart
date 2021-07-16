@@ -7,12 +7,12 @@ class SquircleBorder extends ShapeBorder {
   const SquircleBorder({
     this.side: BorderSide.none,
     this.radius,
-  }) : assert(side != null);
+  });
 
   const SquircleBorder.only({
     this.side: BorderSide.none,
     this.radius,
-  }) : assert(side != null);
+  });
 
   @override
   EdgeInsetsGeometry get dimensions => EdgeInsets.all(side.width);
@@ -55,9 +55,7 @@ class SquircleBorder extends ShapeBorder {
         ..close();
     }
 
-    // if(borderRadius == BorderRadius.only())
-
-    return new Path()
+    return Path()
 
       // Start position
       ..moveTo(startX, startY + radius.topLeft.y)
@@ -110,10 +108,6 @@ class SquircleBorder extends ShapeBorder {
         startX,
         endY - radius.bottomLeft.y,
       )
-
-      // left line
-      //..moveTo(startX, startY + radius)
-
       ..close();
   }
 
