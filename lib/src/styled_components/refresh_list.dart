@@ -6,7 +6,8 @@ class RefreshList extends StatelessWidget {
   final Future<void> Function()? onRefresh;
   final Color? color, backgroundColor;
 
-  const RefreshList({this.child, this.onRefresh, this.color, this.backgroundColor});
+  const RefreshList(
+      {this.child, this.onRefresh, this.color, this.backgroundColor});
   @override
   Widget build(BuildContext context) {
     return LiquidPullToRefresh(
