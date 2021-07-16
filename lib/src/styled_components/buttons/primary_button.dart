@@ -74,32 +74,26 @@ class CantonPrimaryButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        decoration: BoxDecoration(
-          color: CantonColors.transparent,
-          borderRadius: BorderRadius.circular(4),
+        decoration: ShapeDecoration(
+          color: enabled
+              ? containerColor ?? Theme.of(context).primaryColor
+              : Theme.of(context).colorScheme.secondary,
+          shape: SquircleBorder(
+            radius: radius ?? BorderRadius.circular(45),
+            side: border ?? BorderSide.none,
+          ),
         ),
-        child: Container(
-          decoration: ShapeDecoration(
-            color: enabled
-                ? containerColor ?? Theme.of(context).primaryColor
-                : Theme.of(context).colorScheme.secondary,
-            shape: SquircleBorder(
-              radius: radius ?? BorderRadius.circular(45),
-              side: border ?? BorderSide.none,
-            ),
-          ),
-          height: containerHeight ?? 55.0,
-          width: containerWidth ?? size.width,
-          padding:
-              containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
-            children: [
-              prefixIconWidget()!,
-              textWidget(),
-              suffixIconWidget(),
-            ],
-          ),
+        height: containerHeight ?? 55.0,
+        width: containerWidth ?? size.width,
+        padding:
+            containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
+          children: [
+            prefixIconWidget()!,
+            textWidget(),
+            suffixIconWidget(),
+          ],
         ),
       ),
     );
