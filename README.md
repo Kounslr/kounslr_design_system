@@ -1,4 +1,4 @@
-# Canton Design System
+# Canton Design Syste
 
 Canton Design System elements and resources for Flutter.
 
