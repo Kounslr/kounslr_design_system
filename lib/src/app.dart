@@ -8,6 +8,7 @@ class CantonApp extends StatelessWidget {
   final Color? primaryDarkColor;
   final Color primaryLightVariantColor;
   final Color primaryDarkVariantColor;
+  final List<NavigatorObserver>? navigatorObservers;
 
   const CantonApp({
     this.title,
@@ -16,29 +17,33 @@ class CantonApp extends StatelessWidget {
     this.primaryDarkColor,
     this.primaryLightVariantColor = CantonColors.blue,
     this.primaryDarkVariantColor = CantonDarkColors.blue,
+    this.navigatorObservers,
   });
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, watch, child) {
-      final repo = watch(themeProvider);
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title!,
-        themeMode: repo.themeMode,
-        theme: cantonLightTheme().copyWith(
-          primaryColor: primaryLightColor,
-          colorScheme: cantonLightTheme()
-              .colorScheme
-              .copyWith(primaryVariant: primaryLightVariantColor),
-        ),
-        darkTheme: cantonDarkTheme().copyWith(
-          primaryColor: primaryDarkColor,
-          colorScheme: cantonDarkTheme()
-              .colorScheme
-              .copyWith(primaryVariant: primaryDarkVariantColor),
-        ),
-        home: home,
-      );
-    } as Widget Function(BuildContext, T Function<T>(ProviderBase<Object?, T>), Widget?));
+    return Consumer(
+      builder: (context, watch, child) {
+        final repo = watch(themeProvider);
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: title!,
+          themeMode: repo.themeMode,
+          navigatorObservers: navigatorObservers!,
+          theme: cantonLightTheme().copyWith(
+            primaryColor: primaryLightColor,
+            colorScheme: cantonLightTheme()
+                .colorScheme
+                .copyWith(primaryVariant: primaryLightVariantColor),
+          ),
+          darkTheme: cantonDarkTheme().copyWith(
+            primaryColor: primaryDarkColor,
+            colorScheme: cantonDarkTheme()
+                .colorScheme
+                .copyWith(primaryVariant: primaryDarkVariantColor),
+          ),
+          home: home,
+        );
+      },
+    );
   }
 }
