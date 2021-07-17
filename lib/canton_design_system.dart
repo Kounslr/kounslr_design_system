@@ -25,8 +25,9 @@ export 'src/styled_components/styled_components.dart';
 export 'src/methods.dart';
 export 'src/app.dart';
 
-// Icons
+// Assets
 export 'assets/icons/iconly_icon.dart';
 export 'assets/icons/iconly_bold.dart';
 export 'assets/icons/iconly_line.dart';
 export 'assets/icons/iconly_curved.dart';
+export 'assets/icons/iconsax_icons.dart';
