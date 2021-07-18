@@ -133,7 +133,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
       );
 
       if (widget.maxTags != null) {
-        _tags.length = widget.maxTags!;
+        if (_tags.length > widget.maxTags!) _tags.length = widget.maxTags!;
       }
     }
     return _tags;
