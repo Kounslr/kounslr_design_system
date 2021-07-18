@@ -196,8 +196,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
         if (value.length > 0) {
           _textEditingController.clear();
           if (!_tagsStringContents!.contains(val) &&
-              widget.maxTags! > _tagsStringContents!.length) {
-            print(_tagsStringContents!.length);
+              widget.maxTags! <= _tagsStringContents!.length) {
             widget.onTag!(val);
             if (!_showPrefixIcon) {
               setState(() {
