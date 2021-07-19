@@ -11,10 +11,10 @@ class CantonApp extends StatelessWidget {
   final List<NavigatorObserver>? navigatorObservers;
 
   const CantonApp({
-    this.title,
-    this.home,
-    this.primaryLightColor,
-    this.primaryDarkColor,
+    required this.title,
+    required this.home,
+    required this.primaryLightColor,
+    required this.primaryDarkColor,
     this.primaryLightVariantColor = CantonColors.blue,
     this.primaryDarkVariantColor = CantonDarkColors.blue,
     this.navigatorObservers,
@@ -28,7 +28,7 @@ class CantonApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: title!,
           themeMode: repo.themeMode,
-          navigatorObservers: navigatorObservers!,
+          navigatorObservers: navigatorObservers ?? [],
           theme: cantonLightTheme().copyWith(
             primaryColor: primaryLightColor,
             colorScheme: cantonLightTheme()
