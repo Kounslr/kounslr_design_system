@@ -224,7 +224,8 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
           if (lastLastTag.length > 0) {
             _textEditingController.clear();
 
-            if (!_tagsStringContents!.contains(lastLastTag)) {
+            if (!_tagsStringContents!.contains(lastLastTag) &&
+                widget.maxTags! >= _tagsStringContents!.length) {
               widget.onTag!(lastLastTag);
 
               if (!_showPrefixIcon) {
