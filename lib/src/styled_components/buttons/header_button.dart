@@ -5,12 +5,12 @@ class CantonHeaderButton extends StatelessWidget {
     Key? key,
     this.backgroundColor,
     this.icon,
-    required this.onPressed,
+    this.onPressed,
     this.radius,
     this.size,
     this.isClear,
   }) : super(key: key);
-  final void Function() onPressed;
+  final void Function()? onPressed;
   final Widget? icon;
   final Color? backgroundColor;
   final BorderRadius? radius;
@@ -31,7 +31,7 @@ class CantonHeaderButton extends StatelessWidget {
       alignment: [null, false].contains(isClear)
           ? MainAxisAlignment.center
           : MainAxisAlignment.start,
-      onPressed: onPressed,
+      onPressed: onPressed ?? () {},
     );
   }
 }
