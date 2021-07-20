@@ -5,28 +5,33 @@ class CantonHeaderButton extends StatelessWidget {
     Key? key,
     this.backgroundColor,
     this.icon,
-    this.onPressed,
+    required this.onPressed,
     this.radius,
     this.size,
+    this.isClear,
   }) : super(key: key);
-  final void Function()? onPressed;
+  final void Function() onPressed;
   final Widget? icon;
   final Color? backgroundColor;
   final BorderRadius? radius;
   final double? size;
+  final bool? isClear;
 
   @override
   Widget build(BuildContext context) {
     return CantonPrimaryButton(
-      containerColor:
-          backgroundColor ?? Theme.of(context).colorScheme.secondary,
-      containerHeight: size ?? 60.0,
-      containerWidth: size ?? 60.0,
+      containerColor: [null, false].contains(isClear)
+          ? backgroundColor ?? Theme.of(context).colorScheme.secondary
+          : CantonColors.transparent,
+      containerHeight: size ?? 55.0,
+      containerWidth: size ?? 55.0,
       radius: radius,
       containerPadding: const EdgeInsets.all(0),
       prefixIcon: icon,
-      alignment: MainAxisAlignment.center,
-      onPressed: onPressed ?? () => Navigator.of(context).pop(),
+      alignment: [null, false].contains(isClear)
+          ? MainAxisAlignment.center
+          : MainAxisAlignment.start,
+      onPressed: onPressed,
     );
   }
 }
