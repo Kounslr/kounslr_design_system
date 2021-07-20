@@ -30,7 +30,7 @@ class CantonHeaderButton extends StatelessWidget {
       prefixIcon: icon,
       alignment: [null, false].contains(isClear)
           ? MainAxisAlignment.center
-          : MainAxisAlignment.start,
+          : MainAxisAlignment.end,
       onPressed: onPressed ?? () {},
     );
   }
