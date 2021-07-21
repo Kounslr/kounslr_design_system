@@ -26,7 +26,7 @@ class CantonHeaderButton extends StatelessWidget {
       containerHeight: size ?? 55.0,
       containerWidth: size ?? 55.0,
       radius: radius ?? BorderRadius.circular(37),
-      // containerPadding: const EdgeInsets.all(0),
+      containerPadding: const EdgeInsets.all(0),
       prefixIcon: icon,
       alignment: [null, false].contains(isClear)
           ? MainAxisAlignment.center
