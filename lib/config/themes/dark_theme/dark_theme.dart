@@ -30,7 +30,7 @@ ThemeData cantonDarkTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       // 23 for height 65, 18 for height 50
-      contentPadding: const EdgeInsets.all(23),
+      contentPadding: const EdgeInsets.all(15),
       filled: true,
       isCollapsed: true,
       fillColor: Color(0xff050505),
