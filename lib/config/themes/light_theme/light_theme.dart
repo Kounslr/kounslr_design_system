@@ -95,7 +95,7 @@ ThemeData cantonLightTheme() {
     ),
     cardTheme: CardTheme(
       shape: SquircleBorder(
-        radius: BorderRadius.circular(35),
+        radius: BorderRadius.circular(37),
         side: BorderSide(
           width: 1.5,
           color: CantonColors.gray[200]!,
