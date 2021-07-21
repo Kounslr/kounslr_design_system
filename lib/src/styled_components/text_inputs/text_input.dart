@@ -104,7 +104,7 @@ class CantonTextInput extends StatelessWidget {
     Widget? _prefixIconWidget() {
       if (prefixIcon != null) {
         return Padding(
-          padding: containerPadding ?? const EdgeInsets.all(19),
+          padding: containerPadding ?? const EdgeInsets.all(15),
           child: prefixIcon,
         );
       } else {
@@ -115,7 +115,7 @@ class CantonTextInput extends StatelessWidget {
     Widget? _suffixIconWidget() {
       if (suffixIcon != null) {
         return Padding(
-          padding: containerPadding ?? const EdgeInsets.all(19),
+          padding: containerPadding ?? const EdgeInsets.all(15),
           child: suffixIcon,
         );
       } else {
