@@ -138,25 +138,25 @@ class CantonTextInput extends StatelessWidget {
               /// Use EdgeInsets.all,
               /// and change it from 23 to something else.
               /// 23 for height 65, 18 for height 50.
-              contentPadding: containerPadding ?? EdgeInsets.all(18),
+              contentPadding: containerPadding ?? EdgeInsets.all(15),
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
               fillColor: containerColor,
               enabledBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
             ),
@@ -177,24 +177,24 @@ class CantonTextInput extends StatelessWidget {
               /// Use EdgeInsets.all,
               /// and change it from 23 to something else.
               /// 23 for height 65, 18 for height 50.
-              contentPadding: containerPadding ?? EdgeInsets.all(18),
+              contentPadding: containerPadding ?? EdgeInsets.all(15),
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
               fillColor: containerColor,
               enabledBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
-                  radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                  radius: radius ?? BorderRadius.all(Radius.circular(37)),
                   side: border ?? BorderSide.none),
               focusedErrorBorder: SquircleInputBorder(
-                  radius: radius ?? BorderRadius.all(Radius.circular(45)),
+                  radius: radius ?? BorderRadius.all(Radius.circular(37)),
                   side: border ?? BorderSide.none),
             ),
       );
