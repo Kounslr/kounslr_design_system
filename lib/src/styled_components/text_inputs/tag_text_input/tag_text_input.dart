@@ -159,7 +159,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
       inputFormatters: _textInputFormatters(),
       decoration: InputDecoration(
         contentPadding:
-            widget.textFieldStyler!.contentPadding ?? EdgeInsets.all(23),
+            widget.textFieldStyler!.contentPadding ?? EdgeInsets.all(20),
         isDense: widget.textFieldStyler!.isDense,
         helperText: widget.textFieldStyler!.helperText,
         helperStyle: widget.textFieldStyler!.helperStyle,
