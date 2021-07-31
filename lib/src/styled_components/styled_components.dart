@@ -21,7 +21,7 @@ export 'view_headers/view_header_two.dart';
 
 // All
 export 'tag.dart';
-export 'scaffold_view.dart';
+export 'scaffold.dart';
 export 'loading.dart';
 export 'refresh_list.dart';
 export 'canton_expansion_tile.dart';
