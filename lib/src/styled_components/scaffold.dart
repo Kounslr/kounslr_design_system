@@ -5,6 +5,7 @@ class CantonScaffold extends StatelessWidget {
   final Widget? bottomNavBar;
   final AppBar? appBar;
   final EdgeInsets padding;
+  final bool? resizeToAvoidBottomInset;
 
   const CantonScaffold({
     Key? key,
@@ -12,13 +13,14 @@ class CantonScaffold extends StatelessWidget {
     this.bottomNavBar,
     this.appBar,
     this.padding = const EdgeInsets.only(top: 17, left: 17, right: 17),
+    this.resizeToAvoidBottomInset,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => CantonMethods.defocusTextfield(context),
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
         appBar: appBar,
         bottomNavigationBar: bottomNavBar,
         body: SafeArea(
