@@ -79,7 +79,7 @@ class CantonPrimaryButton extends StatelessWidget {
               ? containerColor ?? Theme.of(context).primaryColor
               : Theme.of(context).colorScheme.secondary,
           shape: SquircleBorder(
-            radius: radius ?? BorderRadius.circular(45),
+            radius: radius ?? BorderRadius.circular(37),
             side: border ?? BorderSide.none,
           ),
         ),
