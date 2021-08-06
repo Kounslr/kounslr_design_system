@@ -9,7 +9,7 @@ ThemeData cantonLightTheme() {
     textTheme: MobileTextTheme.theme(base),
     dividerTheme: DividerThemeData(
       space: 0,
-      thickness: 0.5,
+      thickness: 1.5,
       color: CantonColors.borderPrimary,
     ),
     iconTheme: IconThemeData(
@@ -132,7 +132,10 @@ ThemeData cantonLightTheme() {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: CantonColors.transparent,
       elevation: 0.0,
-      unselectedItemColor: CantonColors.iconTertiary,
+      selectedIconTheme: IconThemeData(size: 20),
+      unselectedIconTheme: IconThemeData(size: 20),
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
     ),
   );
 }

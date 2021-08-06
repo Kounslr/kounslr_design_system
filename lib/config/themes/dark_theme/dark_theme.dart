@@ -11,7 +11,7 @@ ThemeData cantonDarkTheme() {
     textTheme: MobileTextTheme.theme(base),
     dividerTheme: DividerThemeData(
       space: 0,
-      thickness: 1,
+      thickness: 1.5,
       color: Color(0xff050505),
     ),
     iconTheme: IconThemeData(
@@ -119,9 +119,12 @@ ThemeData cantonDarkTheme() {
       elevation: 0.0,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: CantonDarkColors.bgCanvasMobile,
+      backgroundColor: CantonColors.transparent,
       elevation: 0.0,
-      unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
+      selectedIconTheme: IconThemeData(size: 20),
+      unselectedIconTheme: IconThemeData(size: 20),
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primaryColor: CantonDarkColors.blue,
