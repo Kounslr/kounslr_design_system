@@ -6,6 +6,7 @@ class ViewHeaderTwo extends StatelessWidget {
   final bool? isBackButtonClear;
   final Widget? buttonOne;
   final Widget? buttonTwo;
+  final Color? textColor;
   final void Function()? backButtonFunction;
   const ViewHeaderTwo(
       {this.title,
@@ -13,6 +14,7 @@ class ViewHeaderTwo extends StatelessWidget {
       this.isBackButtonClear,
       this.buttonOne,
       this.buttonTwo,
+      this.textColor,
       this.backButtonFunction});
 
   @override
@@ -36,7 +38,7 @@ class ViewHeaderTwo extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headline5!
-              .copyWith(color: Theme.of(context).primaryColor),
+              .copyWith(color: textColor ?? Theme.of(context).primaryColor),
         ),
         buttonTwo ??
             CantonHeaderButton(
