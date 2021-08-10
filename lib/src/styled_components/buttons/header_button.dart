@@ -21,8 +21,8 @@ class CantonHeaderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CantonPrimaryButton(
       containerColor: [null, false].contains(isClear)
-          ? backgroundColor ?? Theme.of(context).colorScheme.secondary
-          : CantonColors.transparent,
+          ? Theme.of(context).colorScheme.secondary
+          : backgroundColor ?? CantonColors.transparent,
       containerHeight: size ?? 55.0,
       containerWidth: size ?? 55.0,
       radius: radius ?? BorderRadius.circular(37),
