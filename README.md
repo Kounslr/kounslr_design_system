@@ -34,7 +34,7 @@ BTW ```package:flutter/material.dart``` is already imported when using this pack
 - _Custom Fonts:_ Both serif and sans serif typefaces consisting of Inter UI and Times New Roman.
 - _Light theme:_ Clean light theme.
 - _Dark Theme:_ Clean dark theme with all elements modified.
-- _Dynamic Device Theming: Accustoms to light mode and dark mode based on current device.
+- _Dynamic Device Theming_: Accustoms to light mode and dark mode based on current device.
 
 ## Dependencies
 ```
