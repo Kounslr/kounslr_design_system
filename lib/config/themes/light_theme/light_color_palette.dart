@@ -186,13 +186,13 @@ class CantonColors {
 
   static var colorScheme = ColorScheme.light(
     primary: black,
-    primaryVariant: blue[400]!,
+    primaryVariant: blue,
     secondary: gray[300]!,
     secondaryVariant: gray[600]!,
     background: bgPrimary,
     surface: yellow,
     error: red[700]!,
-    onPrimary: white,
+    onPrimary: blue,
     onSecondary: gray[200]!,
     onBackground: black,
     onSurface: yellow[100]!,
