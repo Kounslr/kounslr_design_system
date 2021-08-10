@@ -22,6 +22,7 @@ class CantonColors {
     },
   );
   static const MaterialColor blue = MaterialColor(
+    // My Favorite Color :)
     0xFF0366d6,
     <int, Color>{
       100: const Color(0xFFf1f8ff),
@@ -184,8 +185,7 @@ class CantonColors {
   static Color? bgWarningInverse = yellow[500];
 
   static var colorScheme = ColorScheme.light(
-    /// My favorite color :)
-    primary: blue,
+    primary: black,
     primaryVariant: blue[400]!,
     secondary: gray[300]!,
     secondaryVariant: gray[600]!,
