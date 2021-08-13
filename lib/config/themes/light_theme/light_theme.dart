@@ -98,7 +98,7 @@ ThemeData cantonLightTheme() {
         radius: BorderRadius.circular(37),
         side: BorderSide(
           width: 1.5,
-          color: CantonColors.gray[300]!,
+          color: CantonColors.gray[200]!,
         ),
       ),
       elevation: 0.0,
