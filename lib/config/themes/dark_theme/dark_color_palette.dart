@@ -184,7 +184,7 @@ class CantonDarkColors {
   static Color bgWarningInverse = Color(0xFFbb8009);
 
   static var colorScheme = ColorScheme.dark(
-    primary: white,
+    primary: textPrimary,
     primaryVariant: blue,
     secondary: const Color(0xff050505),
     secondaryVariant: gray[300]!,

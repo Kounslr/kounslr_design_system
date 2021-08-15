@@ -185,7 +185,7 @@ class CantonColors {
   static Color? bgWarningInverse = yellow[500];
 
   static var colorScheme = ColorScheme.light(
-    primary: black,
+    primary: textPrimary,
     primaryVariant: blue,
     secondary: gray[300]!,
     secondaryVariant: gray[600]!,
