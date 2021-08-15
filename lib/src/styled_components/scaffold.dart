@@ -12,7 +12,7 @@ class CantonScaffold extends StatelessWidget {
     this.body,
     this.bottomNavBar,
     this.appBar,
-    this.padding = const EdgeInsets.only(top: 17, left: 17, right: 17),
+    this.padding = const EdgeInsets.only(left: 17, right: 17),
     this.resizeToAvoidBottomInset,
   }) : super(key: key);
   @override
