@@ -188,7 +188,7 @@ class CantonDarkColors {
     primary: textPrimary,
     primaryVariant: blue,
     secondary: CupertinoColors.systemGrey6.darkColor,
-    secondaryVariant: gray[300]!,
+    secondaryVariant: CupertinoColors.tertiaryLabel.darkColor,
     background: bgPrimary,
     surface: yellow[300]!,
     error: red,
