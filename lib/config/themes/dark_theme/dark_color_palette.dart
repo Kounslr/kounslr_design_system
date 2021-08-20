@@ -187,7 +187,7 @@ class CantonDarkColors {
   static var colorScheme = ColorScheme.dark(
     primary: textPrimary,
     primaryVariant: blue,
-    secondary: const Color(0xff050505),
+    secondary: CupertinoColors.tertiaryLabel.darkColor,
     secondaryVariant: gray[300]!,
     background: bgPrimary,
     surface: yellow[300]!,
