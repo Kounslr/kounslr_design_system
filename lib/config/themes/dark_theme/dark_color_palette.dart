@@ -146,7 +146,7 @@ class CantonDarkColors {
   static Color textWarning = Color(0xFFe3b341);
 
   /// Icon Colors
-  static Color iconPrimary = Color(0xFFc9d1d9);
+  static Color iconPrimary = CupertinoColors.systemBackground;
   static Color iconSecondary = Color(0xFF6e7681);
   static Color iconTertiary = Color(0xFF484f58);
   static Color iconInfo = Color(0xFF58a6ff);
@@ -170,10 +170,10 @@ class CantonDarkColors {
   static Color bgCanvasMobile = CupertinoColors.systemBackground.darkColor;
   static Color bgInverse = Color(0xFFf0f6fc);
   static Color bgInset = Color(0xFF090c10);
-  static Color bgPrimary = Color(0xFF0d1117);
+  static Color bgPrimary = CupertinoColors.systemBackground.darkColor;
   static Color bgSecondary = Color(0xFF0d1117);
   static Color bgTertiary = Color(0xFF161b22);
-  static Color bgOverlay = Color(0xFF1c2128);
+  static Color bgOverlay = CupertinoColors.systemBackground.darkColor;
   static Color bgBackdrop = Color.fromRGBO(1, 4, 9, 0.8);
   static Color bgInfo = Color.fromRGBO(56, 139, 253, 0.1);
   static Color bgInfoInverse = Color(0xFF388bfd);

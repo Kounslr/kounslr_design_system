@@ -6,6 +6,7 @@ export 'package:flutter_feather_icons/flutter_feather_icons.dart';
 export 'package:page_transition/page_transition.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:flutter_svg/flutter_svg.dart';
+export 'package:iconsax/iconsax.dart';
 
 // Config
 export 'config/themes/light_theme/light_theme.dart';
@@ -30,4 +31,3 @@ export 'assets/icons/iconly_icon.dart';
 export 'assets/icons/iconly_bold.dart';
 export 'assets/icons/iconly_line.dart';
 export 'assets/icons/iconly_curved.dart';
-export 'assets/icons/iconsax_icons.dart';

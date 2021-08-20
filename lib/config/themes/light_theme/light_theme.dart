@@ -7,6 +7,8 @@ ThemeData cantonLightTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
     textTheme: MobileTextTheme.theme(base),
+    primaryIconTheme: IconThemeData(size: 24, color: CantonColors.iconPrimary),
+    accentIconTheme: IconThemeData(size: 24, color: CantonColors.iconPrimary),
     dividerTheme: DividerThemeData(
       space: 0,
       thickness: 0.5,

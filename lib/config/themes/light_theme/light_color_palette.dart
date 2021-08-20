@@ -147,7 +147,7 @@ class CantonColors {
   static Color? textWarning = yellow[900];
 
   /// Icon Colors
-  static Color iconPrimary = gray;
+  static Color iconPrimary = CupertinoColors.systemBackground.darkColor;
   static Color? iconSecondary = gray[700];
   static Color? iconTertiary = gray[600];
   static Color? iconInfo = blue[600];
@@ -171,10 +171,10 @@ class CantonColors {
   static Color bgCanvasMobile = CupertinoColors.systemBackground;
   static Color bgInverse = gray;
   static Color? bgInset = gray[200];
-  static Color bgPrimary = white;
+  static Color bgPrimary = CupertinoColors.systemBackground;
   static Color? bgSecondary = gray[100];
   static Color? bgTertiary = gray[200];
-  static Color bgOverlay = white;
+  static Color bgOverlay = CupertinoColors.systemBackground;
   static Color bgBackdrop = Color.fromRGBO(27, 31, 35, 0.5);
   static Color bgInfo = Color(0xFFf1f8ff);
   static Color? bgInfoInverse = blue[600];
