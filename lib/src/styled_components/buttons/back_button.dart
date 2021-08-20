@@ -16,8 +16,8 @@ class CantonBackButton extends StatelessWidget {
       containerWidth: 60.0,
       radius: BorderRadius.circular(50),
       containerPadding: const EdgeInsets.all(0),
-      prefixIcon: IconlyIcon(
-        IconlyLine.ArrowLeft2,
+      prefixIcon: Icon(
+        Iconsax.arrow_left_3,
         color: [null, false].contains(isClear)
             ? Theme.of(context).colorScheme.secondaryVariant
             : Theme.of(context).primaryColor,
