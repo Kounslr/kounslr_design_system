@@ -166,8 +166,8 @@ class CantonDarkColors {
   static Color borderWarning = Color.fromRGBO(187, 128, 9, 0.4);
 
   /// Background Colors
-  static Color bgCanvas = CupertinoColors.systemBackground;
-  static Color bgCanvasMobile = CupertinoColors.systemBackground;
+  static Color bgCanvas = CupertinoColors.systemBackground.darkColor;
+  static Color bgCanvasMobile = CupertinoColors.systemBackground.darkColor;
   static Color bgInverse = Color(0xFFf0f6fc);
   static Color bgInset = Color(0xFF090c10);
   static Color bgPrimary = Color(0xFF0d1117);

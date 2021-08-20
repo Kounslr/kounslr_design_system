@@ -10,7 +10,7 @@ ThemeData cantonLightTheme() {
     dividerTheme: DividerThemeData(
       space: 0,
       thickness: 0.5,
-      color: CantonColors.borderPrimary,
+      color: CantonColors.borderPrimary!,
     ),
     iconTheme: IconThemeData(
       color: CantonColors.iconPrimary,
