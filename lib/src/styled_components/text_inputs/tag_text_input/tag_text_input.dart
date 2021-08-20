@@ -166,7 +166,8 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
         hintText: !_showPrefixIcon ? widget.textFieldStyler!.hintText : null,
         hintStyle: !_showPrefixIcon ? widget.textFieldStyler!.hintStyle : null,
         filled: widget.textFieldStyler!.textFieldFilled,
-        fillColor: widget.textFieldStyler!.textFieldFilledColor,
+        fillColor: widget.textFieldStyler!.textFieldFilledColor ??
+            Theme.of(context).colorScheme.background,
         enabled: widget.textFieldStyler!.textFieldEnabled,
         border: widget.textFieldStyler!.textFieldBorder,
         focusedBorder: widget.textFieldStyler!.textFieldFocusedBorder,
