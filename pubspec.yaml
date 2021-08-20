@@ -19,6 +19,7 @@ dependencies:
   page_transition: ^2.0.2
   liquid_pull_to_refresh: ^3.0.0
   cupertino_icons: ^1.0.3
+  iconsax: ^0.0.8
 
 dev_dependencies:
   flutter_test:
@@ -391,10 +392,6 @@ flutter:
         - asset: lib/assets/fonts/Times-New-Roman-Italic.ttf
           weight: 400
           style: italic
-    #### IconSax Font
-    - family: iconsax
-      fonts:
-        - asset: lib/assets/icons/fonts/iconsax.ttf
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
