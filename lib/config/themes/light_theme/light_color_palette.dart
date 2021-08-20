@@ -190,7 +190,7 @@ class CantonColors {
     primaryVariant: blue,
     secondary: CupertinoColors.systemGrey6,
     secondaryVariant: CupertinoColors.secondaryLabel,
-    background: bgPrimary,
+    background: CupertinoColors.systemGrey6,
     surface: yellow,
     error: red[700]!,
     onPrimary: blue,
