@@ -133,7 +133,7 @@ class CantonDarkColors {
   static const Color transparent = Color(0x00000000);
 
   /// Text Colors [Grays]
-  static Color textPrimary = CupertinoColors.label;
+  static Color textPrimary = CupertinoColors.label.darkColor;
   static Color textSecondary = Color(0xFF8b949e);
   static Color textTertiary = Color(0xFF8b949e);
   static Color textPlaceholder = Color(0xFF484f58);
@@ -155,7 +155,7 @@ class CantonDarkColors {
   static Color iconWarning = Color(0xFFe3b341);
 
   /// Border Colors
-  static Color? borderPrimary = CupertinoColors.separator;
+  static Color? borderPrimary = CupertinoColors.separator.darkColor;
   static Color borderSecondary = Color(0xFF21262d);
   static Color borderTertiary = Color(0xFF6e7681);
   static Color borderOverlay = Color(0xFF30363d);
