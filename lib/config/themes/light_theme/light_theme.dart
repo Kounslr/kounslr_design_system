@@ -9,7 +9,7 @@ ThemeData cantonLightTheme() {
     textTheme: MobileTextTheme.theme(base),
     dividerTheme: DividerThemeData(
       space: 0,
-      thickness: 1.5,
+      thickness: 0.5,
       color: CantonColors.borderPrimary,
     ),
     iconTheme: IconThemeData(
@@ -97,8 +97,8 @@ ThemeData cantonLightTheme() {
       shape: SquircleBorder(
         radius: BorderRadius.circular(37),
         side: BorderSide(
-          width: 1.5,
-          color: CantonColors.gray[200]!,
+          width: 0.5,
+          color: CantonColors.borderPrimary!,
         ),
       ),
       elevation: 0.0,

@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Essentially it's the github/primer color palette with a few modifications
@@ -155,7 +156,7 @@ class CantonColors {
   static Color? iconWarning = yellow[900];
 
   /// Border Colors
-  static Color? borderPrimary = gray[200];
+  static Color? borderPrimary = CupertinoColors.separator;
   static Color borderSecondary = Color(0xFFeaecef);
   static Color? borderTertiary = gray[200];
   static Color? borderOverlay = gray[300];

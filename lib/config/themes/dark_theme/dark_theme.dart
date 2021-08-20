@@ -11,8 +11,8 @@ ThemeData cantonDarkTheme() {
     textTheme: MobileTextTheme.theme(base),
     dividerTheme: DividerThemeData(
       space: 0,
-      thickness: 1.5,
-      color: Color(0xff050505),
+      thickness: 0.5,
+      color: CantonDarkColors.borderPrimary!,
     ),
     iconTheme: IconThemeData(
       color: CantonDarkColors.iconPrimary,
@@ -38,7 +38,7 @@ ThemeData cantonDarkTheme() {
       enabledBorder: SquircleInputBorder(
         radius: BorderRadius.all(Radius.circular(35)),
         side: BorderSide(
-          color: CantonDarkColors.borderPrimary,
+          color: CantonDarkColors.borderPrimary!,
           width: 1.5,
         ),
       ),
@@ -99,7 +99,7 @@ ThemeData cantonDarkTheme() {
     cardTheme: CardTheme(
       shape: SquircleBorder(
         radius: BorderRadius.circular(37),
-        side: BorderSide(color: Color(0xff050505)),
+        side: BorderSide(width: 0.5, color: CantonDarkColors.borderPrimary!),
       ),
       elevation: 0.0,
       color: CantonDarkColors.bgCanvasMobile,
