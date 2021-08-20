@@ -133,7 +133,7 @@ class CantonDarkColors {
   static const Color transparent = Color(0x00000000);
 
   /// Text Colors [Grays]
-  static Color textPrimary = Color(0xFFc9d1d9);
+  static Color textPrimary = CupertinoColors.label;
   static Color textSecondary = Color(0xFF8b949e);
   static Color textTertiary = Color(0xFF8b949e);
   static Color textPlaceholder = Color(0xFF484f58);
@@ -166,8 +166,8 @@ class CantonDarkColors {
   static Color borderWarning = Color.fromRGBO(187, 128, 9, 0.4);
 
   /// Background Colors
-  static Color bgCanvas = Color(0xFF0d1117);
-  static Color bgCanvasMobile = black;
+  static Color bgCanvas = CupertinoColors.systemBackground;
+  static Color bgCanvasMobile = CupertinoColors.systemBackground;
   static Color bgInverse = Color(0xFFf0f6fc);
   static Color bgInset = Color(0xFF090c10);
   static Color bgPrimary = Color(0xFF0d1117);
