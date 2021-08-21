@@ -38,38 +38,32 @@ class CantonPrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    Widget? prefixIconWidget() {
-      if (prefixIcon != null) {
-        return prefixIcon;
-      } else {
-        return Container();
-      }
+    Widget prefixIconWidget() {
+      if (prefixIcon == null) return Container();
+
+      return Container(child: prefixIcon);
     }
 
     Widget suffixIconWidget() {
-      if (suffixIcon != null) {
-        return Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: suffixIcon,
-        );
-      } else {
-        return Container();
-      }
+      if (suffixIcon == null) return Container();
+
+      return Container(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: suffixIcon,
+      );
     }
 
     Widget textWidget() {
-      if (buttonText != null) {
-        return Text(
-          buttonText!,
-          style: Theme.of(context).textTheme.button!.copyWith(
-                color: enabled
-                    ? textColor
-                    : Theme.of(context).colorScheme.secondaryVariant,
-              ),
-        );
-      } else {
-        return Container();
-      }
+      if (buttonText == null) return Container();
+
+      return Text(
+        buttonText!,
+        style: Theme.of(context).textTheme.button?.copyWith(
+              color: enabled
+                  ? textColor
+                  : Theme.of(context).colorScheme.secondaryVariant,
+            ),
+      );
     }
 
     return Container(
@@ -84,8 +78,9 @@ class CantonPrimaryButton extends StatelessWidget {
       ),
       height: containerHeight ?? 55.0,
       width: containerWidth ?? size.width,
-      padding: containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
       child: CupertinoButton(
+        padding:
+            containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
         color: containerColor ?? Theme.of(context).primaryColor,
         borderRadius: BorderRadius.zero,
         onPressed: onPressed,
@@ -93,7 +88,7 @@ class CantonPrimaryButton extends StatelessWidget {
           mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            prefixIconWidget()!,
+            prefixIconWidget(),
             textWidget(),
             suffixIconWidget(),
           ],
