@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CantonPrimaryButton extends StatelessWidget {
@@ -71,22 +72,21 @@ class CantonPrimaryButton extends StatelessWidget {
       }
     }
 
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        decoration: ShapeDecoration(
-          color: enabled
-              ? containerColor ?? Theme.of(context).primaryColor
-              : Theme.of(context).colorScheme.secondary,
-          shape: SquircleBorder(
-            radius: radius ?? BorderRadius.circular(37),
-            side: border ?? BorderSide.none,
-          ),
+    return Container(
+      decoration: ShapeDecoration(
+        color: enabled
+            ? containerColor ?? Theme.of(context).primaryColor
+            : Theme.of(context).colorScheme.secondary,
+        shape: SquircleBorder(
+          radius: radius ?? BorderRadius.circular(37),
+          side: border ?? BorderSide.none,
         ),
-        height: containerHeight ?? 55.0,
-        width: containerWidth ?? size.width,
-        padding:
-            containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
+      ),
+      height: containerHeight ?? 55.0,
+      width: containerWidth ?? size.width,
+      padding: containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
+      child: CupertinoButton.filled(
+        onPressed: onPressed,
         child: Row(
           mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
           children: [
