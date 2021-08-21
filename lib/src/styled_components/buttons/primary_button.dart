@@ -127,7 +127,7 @@ class CantonPrimaryButton2 extends StatefulWidget {
     this.disabledColor = CupertinoColors.quaternarySystemFill,
     this.minSize = kMinInteractiveDimensionCupertino,
     this.pressedOpacity = 0.4,
-    this.borderRadius = const BorderRadius.all(Radius.circular(8.0)),
+    this.borderRadius,
     this.alignment = MainAxisAlignment.spaceBetween,
     required this.onPressed,
   })  : assert(pressedOpacity == null ||
@@ -287,7 +287,8 @@ class _CantonPrimaryButton2State extends State<CantonPrimaryButton2>
             child: DecoratedBox(
               decoration: ShapeDecoration(
                 shape: SquircleBorder(
-                    radius: widget.borderRadius, side: widget.border!),
+                    radius: BorderRadius.circular(37),
+                    side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
                     ? CupertinoDynamicColor.resolve(
                         widget.disabledColor, context)
