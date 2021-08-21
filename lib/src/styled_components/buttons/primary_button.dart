@@ -85,10 +85,13 @@ class CantonPrimaryButton extends StatelessWidget {
       height: containerHeight ?? 55.0,
       width: containerWidth ?? size.width,
       padding: containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
-      child: CupertinoButton.filled(
+      child: CupertinoButton(
+        color: containerColor ?? Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.zero,
         onPressed: onPressed,
         child: Row(
           mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             prefixIconWidget()!,
             textWidget(),
