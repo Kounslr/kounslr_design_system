@@ -37,39 +37,18 @@ class CantonPrimaryButton extends StatelessWidget {
   });
 
   @override
-  @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-
-    return Container(
-      decoration: ShapeDecoration(
-        color: enabled
-            ? containerColor ?? Theme.of(context).primaryColor
-            : Theme.of(context).colorScheme.secondary,
-        shape: SquircleBorder(
-          radius: radius ?? BorderRadius.circular(37),
-          side: border ?? BorderSide.none,
-        ),
-      ),
-      height: containerHeight ?? 55.0,
-      width: containerWidth ?? size.width,
-      child: CantonPrimaryButton2(
-        padding:
-            containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
-        color: containerColor ?? Theme.of(context).primaryColor,
-        disabledColor: Theme.of(context).colorScheme.secondary,
-        borderRadius: BorderRadius.zero,
-        onPressed: onPressed,
-        // child: Row(
-        //   mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: [
-        //     prefixIconWidget(),
-        //     textWidget(),
-        //     suffixIconWidget(),
-        //   ],
-        // ),
-      ),
+    return CantonPrimaryButton2(
+      iconColor: iconColor,
+      textColor: textColor,
+      border: border,
+      containerHeight: containerHeight,
+      containerWidth: containerWidth,
+      buttonText: buttonText,
+      padding: containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
+      color: containerColor ?? Theme.of(context).primaryColor,
+      disabledColor: Theme.of(context).colorScheme.secondary,
+      onPressed: onPressed,
     );
   }
 }
