@@ -41,34 +41,6 @@ class CantonPrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    Widget prefixIconWidget() {
-      if (prefixIcon == null) return Container();
-
-      return Container(child: prefixIcon);
-    }
-
-    Widget suffixIconWidget() {
-      if (suffixIcon == null) return Container();
-
-      return Container(
-        padding: const EdgeInsets.only(left: 16.0),
-        child: suffixIcon,
-      );
-    }
-
-    Widget textWidget() {
-      if (buttonText == null) return Container();
-
-      return Text(
-        buttonText!,
-        style: Theme.of(context).textTheme.button?.copyWith(
-              color: enabled
-                  ? textColor
-                  : Theme.of(context).colorScheme.secondaryVariant,
-            ),
-      );
-    }
-
     return Container(
       decoration: ShapeDecoration(
         color: enabled
@@ -88,15 +60,15 @@ class CantonPrimaryButton extends StatelessWidget {
         disabledColor: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.zero,
         onPressed: onPressed,
-        child: Row(
-          mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            prefixIconWidget(),
-            textWidget(),
-            suffixIconWidget(),
-          ],
-        ),
+        // child: Row(
+        //   mainAxisAlignment: alignment ?? MainAxisAlignment.spaceBetween,
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   children: [
+        //     prefixIconWidget(),
+        //     textWidget(),
+        //     suffixIconWidget(),
+        //   ],
+        // ),
       ),
     );
   }
@@ -111,7 +83,6 @@ const EdgeInsets _kBackgroundButtonPadding = EdgeInsets.symmetric(
 class CantonPrimaryButton2 extends StatefulWidget {
   const CantonPrimaryButton2({
     Key? key,
-    required this.child,
     this.prefixIcon,
     this.suffixIcon,
     this.buttonText,
@@ -126,7 +97,7 @@ class CantonPrimaryButton2 extends StatefulWidget {
     this.containerWidth,
     this.disabledColor = CupertinoColors.quaternarySystemFill,
     this.minSize = kMinInteractiveDimensionCupertino,
-    this.pressedOpacity = 0.4,
+    this.pressedOpacity = 0.3,
     this.borderRadius,
     this.alignment = MainAxisAlignment.spaceBetween,
     required this.onPressed,
@@ -134,7 +105,6 @@ class CantonPrimaryButton2 extends StatefulWidget {
             (pressedOpacity >= 0.0 && pressedOpacity <= 1.0)),
         super(key: key);
 
-  final Widget child;
   final Widget? prefixIcon, suffixIcon;
   final String? buttonText;
   final BorderSide? border;
