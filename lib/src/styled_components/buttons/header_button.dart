@@ -19,14 +19,14 @@ class CantonHeaderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton(
-      containerColor: [false].contains(isClear)
+    return CantonPrimaryButton2(
+      color: [false].contains(isClear)
           ? Theme.of(context).colorScheme.secondary
           : backgroundColor ?? CantonColors.transparent,
       containerHeight: size ?? 55.0,
       containerWidth: size ?? 55.0,
-      radius: radius ?? BorderRadius.circular(37),
-      containerPadding: const EdgeInsets.all(0),
+      borderRadius: radius ?? BorderRadius.circular(37),
+      padding: const EdgeInsets.all(0),
       prefixIcon: icon,
       alignment: [null, false].contains(isClear)
           ? MainAxisAlignment.center

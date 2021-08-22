@@ -8,14 +8,14 @@ class CantonBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton(
-      containerColor: [null, false].contains(isClear)
+    return CantonPrimaryButton2(
+      color: [null, false].contains(isClear)
           ? Theme.of(context).colorScheme.secondary
           : CantonColors.transparent,
       containerHeight: 60.0,
       containerWidth: 60.0,
-      radius: BorderRadius.circular(50),
-      containerPadding: const EdgeInsets.all(0),
+      borderRadius: BorderRadius.circular(50),
+      padding: EdgeInsets.zero,
       prefixIcon: Icon(
         Iconsax.arrow_left_3,
         color: [null, false].contains(isClear)
