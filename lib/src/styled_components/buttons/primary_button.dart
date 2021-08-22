@@ -188,7 +188,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
             child: DecoratedBox(
               decoration: ShapeDecoration(
                 shape: SquircleBorder(
-                    radius: BorderRadius.circular(37),
+                    radius: widget.borderRadius ?? BorderRadius.circular(37),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
                     ? CupertinoDynamicColor.resolve(
