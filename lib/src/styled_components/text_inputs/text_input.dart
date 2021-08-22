@@ -142,7 +142,8 @@ class CantonTextInput extends StatelessWidget {
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
-              fillColor: containerColor,
+              fillColor:
+                  containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
                 radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
@@ -181,7 +182,8 @@ class CantonTextInput extends StatelessWidget {
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
-              fillColor: containerColor,
+              fillColor:
+                  containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
                 radius: radius ?? BorderRadius.all(Radius.circular(37)),
                 side: border ?? BorderSide.none,
