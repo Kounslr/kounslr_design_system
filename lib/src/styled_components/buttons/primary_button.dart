@@ -30,7 +30,7 @@ class CantonPrimaryButton extends StatefulWidget {
     this.minSize = kMinInteractiveDimensionCupertino,
     this.pressedOpacity = 0.3,
     this.borderRadius,
-    this.alignment = MainAxisAlignment.spaceBetween,
+    this.alignment,
     required this.onPressed,
   })  : assert(pressedOpacity == null ||
             (pressedOpacity >= 0.0 && pressedOpacity <= 1.0)),
@@ -47,7 +47,7 @@ class CantonPrimaryButton extends StatefulWidget {
   final double? minSize;
   final double? pressedOpacity;
   final BorderRadius? borderRadius;
-  final MainAxisAlignment alignment;
+  final MainAxisAlignment? alignment;
   bool get enabled => onPressed != null;
 
   @override
@@ -193,7 +193,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                 color: widget.color != null && !enabled
                     ? CupertinoDynamicColor.resolve(
                         widget.disabledColor, context)
-                    : widget.color,
+                    : widget.color ?? Theme.of(context).primaryColor,
               ),
               child: Container(
                 height: widget.containerHeight ?? 55.0,
@@ -203,7 +203,8 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                         ? _kBackgroundButtonPadding
                         : _kButtonPadding),
                 child: Row(
-                  mainAxisAlignment: widget.alignment,
+                  mainAxisAlignment:
+                      widget.alignment ?? MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     prefixIconWidget(),
