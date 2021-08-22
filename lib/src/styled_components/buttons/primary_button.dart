@@ -162,7 +162,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
         widget.buttonText!,
         style: Theme.of(context).textTheme.button?.copyWith(
               color: enabled
-                  ? widget.textColor
+                  ? (widget.textColor ?? CantonColors.white)
                   : Theme.of(context).colorScheme.secondaryVariant,
             ),
       );
