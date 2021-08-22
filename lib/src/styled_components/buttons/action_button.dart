@@ -19,7 +19,7 @@ class CantonActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton2(
+    return CantonPrimaryButton(
       prefixIcon: icon,
       borderRadius: BorderRadius.zero,
       color: CantonColors.transparent,

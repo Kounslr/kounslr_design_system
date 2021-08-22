@@ -8,7 +8,7 @@ class CantonBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton2(
+    return CantonPrimaryButton(
       color: [null, false].contains(isClear)
           ? Theme.of(context).colorScheme.secondary
           : CantonColors.transparent,

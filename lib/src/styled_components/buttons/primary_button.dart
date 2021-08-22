@@ -5,62 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
-class CantonPrimaryButton extends StatelessWidget {
-  final String? buttonText;
-  final MainAxisAlignment? alignment;
-  final EdgeInsets? containerPadding;
-  final bool enabled;
-  final void Function()? onPressed;
-  final double? iconSize, iconPadding, containerWidth, containerHeight;
-  final BorderSide? border;
-  final BorderRadius? radius;
-  final Widget? prefixIcon, suffixIcon;
-  final Color? containerColor, textColor, iconColor;
-
-  const CantonPrimaryButton({
-    this.buttonText,
-    this.onPressed,
-    this.alignment,
-    this.border,
-    this.containerPadding,
-    this.radius,
-    this.enabled = true,
-    this.iconSize,
-    this.iconPadding,
-    this.containerWidth,
-    this.containerHeight,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.containerColor,
-    this.textColor,
-    this.iconColor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return CantonPrimaryButton2(
-      iconColor: iconColor,
-      textColor: textColor,
-      border: border,
-      containerHeight: containerHeight,
-      containerWidth: containerWidth,
-      buttonText: buttonText,
-      padding: containerPadding ?? const EdgeInsets.symmetric(horizontal: 16.0),
-      color: containerColor ?? Theme.of(context).primaryColor,
-      disabledColor: Theme.of(context).colorScheme.secondary,
-      onPressed: onPressed,
-    );
-  }
-}
-
 const EdgeInsets _kButtonPadding = EdgeInsets.all(16.0);
 const EdgeInsets _kBackgroundButtonPadding = EdgeInsets.symmetric(
   vertical: 14.0,
   horizontal: 64.0,
 );
 
-class CantonPrimaryButton2 extends StatefulWidget {
-  const CantonPrimaryButton2({
+class CantonPrimaryButton extends StatefulWidget {
+  const CantonPrimaryButton({
     Key? key,
     this.prefixIcon,
     this.suffixIcon,
@@ -99,7 +51,7 @@ class CantonPrimaryButton2 extends StatefulWidget {
   bool get enabled => onPressed != null;
 
   @override
-  _CantonPrimaryButton2State createState() => _CantonPrimaryButton2State();
+  _CantonPrimaryButtonState createState() => _CantonPrimaryButtonState();
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -109,7 +61,7 @@ class CantonPrimaryButton2 extends StatefulWidget {
   }
 }
 
-class _CantonPrimaryButton2State extends State<CantonPrimaryButton2>
+class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
     with SingleTickerProviderStateMixin {
   static const Duration kFadeOutDuration = Duration(milliseconds: 10);
   static const Duration kFadeInDuration = Duration(milliseconds: 100);
@@ -133,7 +85,7 @@ class _CantonPrimaryButton2State extends State<CantonPrimaryButton2>
   }
 
   @override
-  void didUpdateWidget(CantonPrimaryButton2 old) {
+  void didUpdateWidget(CantonPrimaryButton old) {
     super.didUpdateWidget(old);
     _setTween();
   }
