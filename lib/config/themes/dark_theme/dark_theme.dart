@@ -119,12 +119,18 @@ ThemeData cantonDarkTheme() {
       elevation: 0.0,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: CantonColors.transparent,
+      backgroundColor: CantonColors.bgPrimary,
       elevation: 0.0,
-      selectedIconTheme: IconThemeData(size: 20),
-      unselectedIconTheme: IconThemeData(size: 20),
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
+      selectedIconTheme: IconThemeData(
+        size: 24,
+        color: CantonDarkColors.colorScheme.secondaryVariant,
+      ),
+      unselectedIconTheme: IconThemeData(
+        size: 24,
+        color: base.primaryColor,
+      ),
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primaryColor: CantonDarkColors.blue,
