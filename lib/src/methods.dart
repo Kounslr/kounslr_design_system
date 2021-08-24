@@ -27,6 +27,22 @@ class CantonMethods {
 
     return result;
   }
+
+  static String separateNumberByThreeDigits(
+      {required int source, bool? commas}) {
+    RegExp reg = new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))');
+    String Function(Match) mathFunc;
+
+    if ([null, false].contains(commas)) {
+      mathFunc = (Match match) => '${match[1]} ';
+    } else {
+      mathFunc = (Match match) => '${match[1]}, ';
+    }
+
+    String result = source.toString().replaceAllMapped(reg, mathFunc);
+
+    return result;
+  }
 }
 
 extension CantonStringMethods on String {
