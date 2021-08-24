@@ -191,8 +191,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                     radius: widget.borderRadius ?? BorderRadius.circular(37),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
-                    ? CupertinoDynamicColor.resolve(
-                        widget.disabledColor, context)
+                    ? widget.disabledColor
                     : widget.color ?? Theme.of(context).primaryColor,
               ),
               child: Container(
