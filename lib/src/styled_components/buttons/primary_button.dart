@@ -201,7 +201,8 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                     (widget.color != null
                         ? _kBackgroundButtonPadding
                         : _kButtonPadding),
-                child: widget.color != null
+                child: (![CantonColors.transparent, null]
+                        .contains(widget.color))
                     ? Row(
                         mainAxisAlignment:
                             widget.alignment ?? MainAxisAlignment.spaceBetween,
