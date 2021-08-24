@@ -191,7 +191,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                     radius: widget.borderRadius ?? BorderRadius.circular(37),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
-                    ? Theme.of(context).colorScheme.secondaryVariant
+                    ? Theme.of(context).colorScheme.secondary
                     : widget.color ?? Theme.of(context).primaryColor,
               ),
               child: Container(
