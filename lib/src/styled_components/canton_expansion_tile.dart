@@ -37,8 +37,7 @@ class CantonExpansionTile extends StatefulWidget {
     this.trailing,
     this.initiallyExpanded = false,
     this.childrenPadding,
-  })  : assert(initiallyExpanded != null),
-        super(key: key);
+  }) : super(key: key);
 
   /// A widget to display before the title.
   ///
@@ -206,7 +205,7 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
     final ThemeData theme = Theme.of(context);
     _borderColorTween..end = theme.dividerColor;
     _headerColorTween
-      ..begin = theme.textTheme.subhead!.color
+      ..begin = theme.textTheme.subtitle1!.color
       ..end = theme.accentColor;
     _iconColorTween
       ..begin = theme.unselectedWidgetColor
