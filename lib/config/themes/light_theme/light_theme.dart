@@ -132,15 +132,20 @@ ThemeData cantonLightTheme() {
     dividerColor: CantonColors.borderPrimary!,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
+      selectedItemColor: base.primaryColor,
+      selectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
+      unselectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
       backgroundColor: CantonColors.bgPrimary,
+      type: BottomNavigationBarType.fixed,
       elevation: 0.0,
       selectedIconTheme: IconThemeData(
         size: 24,
-        color: CantonColors.colorScheme.secondaryVariant,
+        color: base.primaryColor,
       ),
       unselectedIconTheme: IconThemeData(
         size: 24,
-        color: base.primaryColor,
+        color: CantonDarkColors.colorScheme.secondaryVariant,
       ),
       showSelectedLabels: true,
       showUnselectedLabels: true,

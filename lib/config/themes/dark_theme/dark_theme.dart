@@ -119,15 +119,20 @@ ThemeData cantonDarkTheme() {
       elevation: 0.0,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: CantonColors.bgPrimary,
+      unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
+      selectedItemColor: base.primaryColor,
+      selectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
+      unselectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
+      backgroundColor: CantonColors.bgCanvasMobile,
+      type: BottomNavigationBarType.fixed,
       elevation: 0.0,
       selectedIconTheme: IconThemeData(
         size: 24,
-        color: CantonDarkColors.colorScheme.secondaryVariant,
+        color: base.primaryColor,
       ),
       unselectedIconTheme: IconThemeData(
         size: 24,
-        color: base.primaryColor,
+        color: CantonDarkColors.colorScheme.secondaryVariant,
       ),
       showSelectedLabels: true,
       showUnselectedLabels: true,
