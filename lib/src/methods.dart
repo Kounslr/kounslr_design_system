@@ -36,7 +36,7 @@ class CantonMethods {
     if ([null, false].contains(commas)) {
       mathFunc = (Match match) => '${match[1]} ';
     } else {
-      mathFunc = (Match match) => '${match[1]}, ';
+      mathFunc = (Match match) => '${match[1]},';
     }
 
     String result = source.toString().replaceAllMapped(reg, mathFunc);
