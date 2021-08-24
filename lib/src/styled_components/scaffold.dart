@@ -4,7 +4,7 @@ class CantonScaffold extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavBar;
   final AppBar? appBar;
-  final EdgeInsets padding;
+  final EdgeInsets? padding;
   final bool? resizeToAvoidBottomInset;
 
   const CantonScaffold({
@@ -25,7 +25,7 @@ class CantonScaffold extends StatelessWidget {
         bottomNavigationBar: bottomNavBar,
         body: SafeArea(
           child: Padding(
-            padding: padding,
+            padding: padding ?? const EdgeInsets.only(left: 17, right: 17),
             child: body,
           ),
         ),
