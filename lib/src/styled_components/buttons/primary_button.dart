@@ -213,7 +213,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                           suffixIconWidget(),
                         ],
                       )
-                    : ![widget.prefixIcon, widget.suffixIcon].contains(null)
+                    : [widget.prefixIcon, widget.suffixIcon].contains(null)
                         ? Row(
                             mainAxisAlignment: widget.alignment ??
                                 MainAxisAlignment.spaceBetween,
