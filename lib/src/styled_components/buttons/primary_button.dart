@@ -31,7 +31,7 @@ class CantonPrimaryButton extends StatefulWidget {
     this.pressedOpacity = 0.3,
     this.borderRadius,
     this.alignment,
-    required this.onPressed,
+    this.onPressed,
   })  : assert(pressedOpacity == null ||
             (pressedOpacity >= 0.0 && pressedOpacity <= 1.0)),
         super(key: key);
