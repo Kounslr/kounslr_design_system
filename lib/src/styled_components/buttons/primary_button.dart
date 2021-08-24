@@ -191,7 +191,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                     radius: widget.borderRadius ?? BorderRadius.circular(37),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
-                    ? widget.disabledColor
+                    ? Theme.of(context).colorScheme.secondaryVariant
                     : widget.color ?? Theme.of(context).primaryColor,
               ),
               child: Container(
@@ -201,16 +201,18 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                     (widget.color != null
                         ? _kBackgroundButtonPadding
                         : _kButtonPadding),
-                child: Row(
-                  mainAxisAlignment:
-                      widget.alignment ?? MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    prefixIconWidget(),
-                    textWidget(),
-                    suffixIconWidget(),
-                  ],
-                ),
+                child: widget.color != null
+                    ? Row(
+                        mainAxisAlignment:
+                            widget.alignment ?? MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          prefixIconWidget(),
+                          textWidget(),
+                          suffixIconWidget(),
+                        ],
+                      )
+                    : textWidget(),
               ),
             ),
           ),
