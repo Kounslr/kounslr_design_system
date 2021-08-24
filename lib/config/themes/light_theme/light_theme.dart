@@ -139,14 +139,6 @@ ThemeData cantonLightTheme() {
       backgroundColor: CantonColors.bgPrimary,
       type: BottomNavigationBarType.fixed,
       elevation: 0.0,
-      selectedIconTheme: IconThemeData(
-        size: 24,
-        color: base.primaryColor,
-      ),
-      unselectedIconTheme: IconThemeData(
-        size: 24,
-        color: CantonDarkColors.colorScheme.secondaryVariant,
-      ),
       showSelectedLabels: true,
       showUnselectedLabels: true,
     ),
