@@ -170,7 +170,7 @@ class CantonDarkColors {
   static Color bgCanvasMobile = CupertinoColors.systemBackground.darkColor;
   static Color bgInverse = Color(0xFFf0f6fc);
   static Color bgInset = Color(0xFF090c10);
-  static Color bgPrimary = CupertinoColors.systemBackground.darkColor;
+  static Color bgPrimary = CupertinoColors.darkBackgroundGray;
   static Color bgSecondary = Color(0xFF0d1117);
   static Color bgTertiary = Color(0xFF161b22);
   static Color bgOverlay = CupertinoColors.systemBackground.darkColor;

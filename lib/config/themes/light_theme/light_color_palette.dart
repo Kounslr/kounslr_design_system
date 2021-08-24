@@ -167,8 +167,8 @@ class CantonColors {
   static Color? borderWarning = yellow[700];
 
   /// Background Colors
-  static Color bgCanvas = CupertinoColors.systemBackground;
-  static Color bgCanvasMobile = CupertinoColors.systemBackground;
+  static Color bgCanvas = CupertinoColors.lightBackgroundGray;
+  static Color bgCanvasMobile = CupertinoColors.lightBackgroundGray;
   static Color bgInverse = gray;
   static Color? bgInset = gray[200];
   static Color bgPrimary = CupertinoColors.systemBackground;
