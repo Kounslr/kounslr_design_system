@@ -198,7 +198,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                 height: widget.containerHeight ?? 55.0,
                 width: widget.containerWidth ?? size.width,
                 padding: widget.padding ??
-                    (widget.color != null
+                    ((![CantonColors.transparent, null].contains(widget.color))
                         ? _kBackgroundButtonPadding
                         : _kButtonPadding),
                 child: (![CantonColors.transparent, null]
