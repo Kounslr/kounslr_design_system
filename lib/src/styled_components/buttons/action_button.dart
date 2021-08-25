@@ -6,7 +6,9 @@ class CantonActionButton extends StatelessWidget {
   final Widget icon;
   final Color? iconColor;
   final double? iconSize, containerWidth, containerHeight;
-  final void Function() onPressed;
+  final EdgeInsets? padding;
+  final MainAxisAlignment? alignment;
+  final void Function()? onPressed;
 
   const CantonActionButton({
     required this.icon,
@@ -14,6 +16,8 @@ class CantonActionButton extends StatelessWidget {
     this.iconColor,
     this.containerWidth,
     this.containerHeight,
+    this.alignment,
+    this.padding,
     this.iconSize,
   });
 
@@ -23,12 +27,12 @@ class CantonActionButton extends StatelessWidget {
       prefixIcon: icon,
       borderRadius: BorderRadius.zero,
       color: CantonColors.transparent,
-      alignment: MainAxisAlignment.center,
+      alignment: alignment ?? MainAxisAlignment.center,
       containerWidth: containerWidth ?? 40,
       containerHeight: containerHeight ?? 40,
       iconColor: iconColor ?? Theme.of(context).primaryColor,
       iconSize: iconSize ?? 21,
-      padding: const EdgeInsets.all(5),
+      padding: padding ?? const EdgeInsets.all(5),
       onPressed: onPressed,
     );
   }
