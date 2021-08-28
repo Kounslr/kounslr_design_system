@@ -32,7 +32,11 @@ class ViewHeaderTwo extends StatelessWidget {
                   Navigator.pop(context);
                 },
               )
-            : buttonOne!,
+            : buttonOne ??
+                CantonHeaderButton(
+                  backgroundColor: CantonColors.transparent,
+                  icon: Container(),
+                ),
         Text(
           title!,
           style: Theme.of(context).textTheme.headline5!.copyWith(
