@@ -97,6 +97,7 @@ ThemeData cantonDarkTheme() {
     ),
     colorScheme: CantonDarkColors.colorScheme,
     cardTheme: CardTheme(
+      margin: EdgeInsets.zero,
       shape: SquircleBorder(
         radius: BorderRadius.circular(37),
         side: BorderSide(width: 0.5, color: CantonDarkColors.borderPrimary!),
