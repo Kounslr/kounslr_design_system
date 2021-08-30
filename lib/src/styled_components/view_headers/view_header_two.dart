@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:canton_design_system/src/styled_components/buttons/null_button.dart';
 
 class ViewHeaderTwo extends StatelessWidget {
   final String? title;
@@ -32,22 +33,14 @@ class ViewHeaderTwo extends StatelessWidget {
                   Navigator.pop(context);
                 },
               )
-            : buttonOne ??
-                CantonHeaderButton(
-                  backgroundColor: CantonColors.transparent,
-                  icon: Container(),
-                ),
+            : buttonOne ?? CantonNullButton(),
         Text(
           title!,
           style: Theme.of(context).textTheme.headline5!.copyWith(
               color: textColor ?? Theme.of(context).colorScheme.primary,
               fontWeight: FontWeight.w600),
         ),
-        buttonTwo ??
-            CantonHeaderButton(
-              backgroundColor: CantonColors.transparent,
-              icon: Container(),
-            )
+        buttonTwo ?? CantonNullButton()
       ],
     );
   }
