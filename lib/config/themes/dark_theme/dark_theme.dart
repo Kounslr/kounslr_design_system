@@ -124,7 +124,7 @@ ThemeData cantonDarkTheme() {
       selectedItemColor: base.primaryColor,
       selectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
       unselectedLabelStyle: MobileTextTheme.theme(base).bodyText2,
-      backgroundColor: CantonColors.bgCanvasMobile,
+      backgroundColor: CantonDarkColors.bgCanvasMobile,
       type: BottomNavigationBarType.fixed,
       elevation: 0.0,
       showSelectedLabels: true,
