@@ -3,16 +3,16 @@ import 'package:canton_design_system/canton_design_system.dart';
 class CantonScaffold extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavBar;
-  final AppBar? appBar;
   final EdgeInsets? padding;
+  final Color? backgroundColor;
   final bool? resizeToAvoidBottomInset;
 
   const CantonScaffold({
     Key? key,
     this.body,
     this.bottomNavBar,
-    this.appBar,
     this.padding = const EdgeInsets.only(left: 17, right: 17),
+    this.backgroundColor,
     this.resizeToAvoidBottomInset,
   }) : super(key: key);
   @override
@@ -21,8 +21,8 @@ class CantonScaffold extends StatelessWidget {
       onTap: () => CantonMethods.defocusTextfield(context),
       child: Scaffold(
         resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
-        appBar: appBar,
         bottomNavigationBar: bottomNavBar,
+        backgroundColor: backgroundColor,
         body: SafeArea(
           child: Padding(
             padding: padding ?? const EdgeInsets.only(left: 17, right: 17),
