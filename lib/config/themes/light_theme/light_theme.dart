@@ -125,7 +125,7 @@ ThemeData cantonLightTheme() {
     colorScheme: CantonColors.colorScheme,
     primaryColor: CantonColors.blue,
     errorColor: CantonColors.bgDangerInverse,
-    canvasColor: CantonColors.bgCanvas,
+    canvasColor: CantonColors.bgCanvasMobile,
     splashColor: CantonColors.transparent,
     highlightColor: CantonColors.transparent,
     backgroundColor: CantonColors.bgPrimary,
