@@ -43,31 +43,10 @@ class CantonMethods {
 
     return result;
   }
-}
 
-extension CantonStringMethods on String {
-  String addDotsToString(String string, int index) {
-    List<String> wordList = string.split(' ');
+  static String removeAllHtmlTags(String htmlText) {
+    RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
 
-    String result =
-        wordList.sublist(0, index).join(' ').replaceAll(RegExp(r' '), ' ') +
-            '...';
-
-    return result;
-  }
-}
-
-// There could be some glitches while using this method
-extension CantonListMethods on List {
-  List removeDuplicates() {
-    List list = [];
-    Map<String, Object> mapFilter = {};
-
-    for (var item in this) {
-      mapFilter[item.id!] = item;
-    }
-    list = mapFilter.values.toList();
-
-    return list;
+    return htmlText.replaceAll(exp, '');
   }
 }
