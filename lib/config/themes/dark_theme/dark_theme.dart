@@ -103,7 +103,7 @@ ThemeData cantonDarkTheme() {
         side: BorderSide(width: 0.5, color: CantonDarkColors.borderPrimary!),
       ),
       elevation: 0.0,
-      color: CantonDarkColors.bgCanvasMobile,
+      color: CantonDarkColors.colorScheme.secondary,
     ),
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: CantonDarkColors.bgPrimary,
