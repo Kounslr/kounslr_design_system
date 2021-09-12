@@ -135,10 +135,12 @@ ThemeData cantonLightTheme() {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
       selectedItemColor: base.primaryColor,
-      selectedLabelStyle:
-          MobileTextTheme.theme(base).bodyText1?.copyWith(fontSize: 12),
-      unselectedLabelStyle:
-          MobileTextTheme.theme(base).bodyText1?.copyWith(fontSize: 12),
+      selectedLabelStyle: MobileTextTheme.theme(base)
+          .bodyText2
+          ?.copyWith(fontWeight: FontWeight.w500),
+      unselectedLabelStyle: MobileTextTheme.theme(base)
+          .bodyText2
+          ?.copyWith(fontWeight: FontWeight.w500),
       backgroundColor: CantonColors.bgPrimary,
       type: BottomNavigationBarType.fixed,
       elevation: 0.0,
