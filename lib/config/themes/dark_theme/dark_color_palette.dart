@@ -193,7 +193,7 @@ class CantonDarkColors {
     surface: yellow[300]!,
     error: red,
     onPrimary: blue,
-    onSecondary: CupertinoColors.darkBackgroundGray,
+    onSecondary: Color(0xFF212122),
     onBackground: black,
     onSurface: const Color(0xFF3c1e00),
     onError: const Color(0xff400102),
