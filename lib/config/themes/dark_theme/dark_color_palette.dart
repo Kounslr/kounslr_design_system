@@ -133,7 +133,7 @@ class CantonDarkColors {
   static const Color transparent = Color(0x00000000);
 
   /// Text Colors [Grays]
-  static Color textPrimary = CupertinoColors.label.darkColor;
+  static Color textPrimary = gray[100]!;
   static Color textSecondary = Color(0xFF8b949e);
   static Color textTertiary = Color(0xFF8b949e);
   static Color textPlaceholder = Color(0xFF484f58);

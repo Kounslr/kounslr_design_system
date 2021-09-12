@@ -134,7 +134,7 @@ class CantonColors {
   static const Color transparent = Color(0x00000000);
 
   /// Text Colors [Grays]
-  static Color textPrimary = CupertinoColors.label;
+  static Color textPrimary = gray;
   static Color? textSecondary = gray[700];
   static Color? textTertiary = gray[600];
   static Color? textPlaceholder = gray[600];
