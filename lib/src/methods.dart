@@ -9,11 +9,14 @@ class CantonMethods {
   static Future<void> viewTransition(BuildContext context, Widget view) =>
       Navigator.push(
         context,
-        PageTransition(
-          child: view,
-          type: PageTransitionType.rightToLeft,
-          curve: Curves.ease,
-          duration: Duration(milliseconds: 300),
+        MaterialPageRoute(
+          builder: (context) {
+            return view;
+          },
+          // child: view,
+          // type: PageTransitionType.rightToLeft,
+          // curve: Curves.ease,
+          // duration: Duration(milliseconds: 300),
         ),
       );
 
