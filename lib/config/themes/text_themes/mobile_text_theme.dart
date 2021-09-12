@@ -15,14 +15,14 @@ class MobileTextTheme {
     return base.textTheme.copyWith(
       headline1: TextStyle(
         fontFamily: kFontFamily,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w700,
         fontSize: kH00,
         height: kLineHeight,
         color: lightDarkModeDefaultTextColor(base),
       ),
       headline2: TextStyle(
         fontFamily: kFontFamily,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w700,
         fontSize: kH0,
         height: kLineHeight,
         color: lightDarkModeDefaultTextColor(base),
