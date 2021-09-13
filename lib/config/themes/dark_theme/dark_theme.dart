@@ -1,6 +1,7 @@
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:canton_design_system/config/themes/light_theme/light_color_palette.dart';
 import 'package:canton_design_system/config/themes/text_themes/mobile_text_theme.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 
 ThemeData cantonDarkTheme() {
@@ -36,30 +37,34 @@ ThemeData cantonDarkTheme() {
       fillColor: Color(0xff050505),
       hoverColor: CantonDarkColors.gray[400],
       enabledBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonDarkColors.borderPrimary!,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonDarkColors.bgDangerInverse,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonDarkColors.gray[400]!,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonDarkColors.bgDangerInverse,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
@@ -98,9 +103,14 @@ ThemeData cantonDarkTheme() {
     colorScheme: CantonDarkColors.colorScheme,
     cardTheme: CardTheme(
       margin: EdgeInsets.zero,
-      shape: SquircleBorder(
-        radius: BorderRadius.circular(37),
-        side: BorderSide(width: 0.5, color: CantonDarkColors.borderPrimary!),
+      shape: SmoothRectangleBorder(
+        borderRadius: SmoothBorderRadius.all(
+          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+        ),
+        side: BorderSide(
+          width: 1.5,
+          color: CantonDarkColors.borderPrimary!,
+        ),
       ),
       elevation: 0.0,
       color: CantonDarkColors.colorScheme.secondary,

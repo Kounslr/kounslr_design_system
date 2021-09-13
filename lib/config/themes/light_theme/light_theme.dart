@@ -1,6 +1,7 @@
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:canton_design_system/config/themes/light_theme/light_color_palette.dart';
 import 'package:canton_design_system/config/themes/text_themes/mobile_text_theme.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 
 ThemeData cantonLightTheme() {
@@ -35,31 +36,36 @@ ThemeData cantonLightTheme() {
       isCollapsed: true,
       fillColor: CantonColors.gray[300],
       hoverColor: CantonColors.gray[400],
+
       enabledBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonColors.bgDangerInverse!,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: BorderRadius.all(Radius.circular(35)),
+        radius: SmoothBorderRadius.all(
+            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
         side: BorderSide(
-          color: CantonColors.bgDangerInverse!,
+          color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
@@ -97,10 +103,12 @@ ThemeData cantonLightTheme() {
     ),
     cardTheme: CardTheme(
       margin: EdgeInsets.zero,
-      shape: SquircleBorder(
-        radius: BorderRadius.circular(37),
+      shape: SmoothRectangleBorder(
+        borderRadius: SmoothBorderRadius.all(
+          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+        ),
         side: BorderSide(
-          width: 0.5,
+          width: 1.5,
           color: CantonColors.borderPrimary!,
         ),
       ),
@@ -111,7 +119,15 @@ ThemeData cantonLightTheme() {
       backgroundColor: CantonColors.bgPrimary,
       modalBackgroundColor: CantonColors.bgPrimary,
       modalElevation: 0.5,
-      shape: SquircleBorder(radius: BorderRadius.circular(45)),
+      shape: SmoothRectangleBorder(
+        borderRadius: SmoothBorderRadius.vertical(
+          top: SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+        ),
+        side: BorderSide(
+          width: 1.5,
+          color: CantonColors.borderPrimary!,
+        ),
+      ),
     ),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: CantonColors.blue,
