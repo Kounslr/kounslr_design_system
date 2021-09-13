@@ -7,6 +7,7 @@ export 'package:page_transition/page_transition.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:iconsax/iconsax.dart';
+export 'package:figma_squircle/figma_squircle.dart';
 
 // Config
 export 'config/themes/light_theme/light_theme.dart';
