@@ -147,26 +147,30 @@ class CantonTextInput extends StatelessWidget {
                   containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
             ),
@@ -195,26 +199,30 @@ class CantonTextInput extends StatelessWidget {
                   containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(
-                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(
+                        cornerRadius: kDefaultBorderRadius,
+                        cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
             ),

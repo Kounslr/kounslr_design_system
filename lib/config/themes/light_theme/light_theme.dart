@@ -38,32 +38,32 @@ ThemeData cantonLightTheme() {
       hoverColor: CantonColors.gray[400],
 
       enabledBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
@@ -105,7 +105,7 @@ ThemeData cantonLightTheme() {
       margin: EdgeInsets.zero,
       shape: SmoothRectangleBorder(
         borderRadius: SmoothBorderRadius.all(
-          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+          SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
         ),
         side: BorderSide(
           width: 1.5,
@@ -121,7 +121,8 @@ ThemeData cantonLightTheme() {
       modalElevation: 0.5,
       shape: SmoothRectangleBorder(
         borderRadius: SmoothBorderRadius.vertical(
-          top: SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+          top: SmoothRadius(
+              cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
         ),
         side: BorderSide(
           width: 1.5,

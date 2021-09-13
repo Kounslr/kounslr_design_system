@@ -191,7 +191,9 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                 shape: SmoothRectangleBorder(
                     borderRadius: widget.borderRadius ??
                         SmoothBorderRadius.all(
-                          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+                          SmoothRadius(
+                              cornerRadius: kDefaultBorderRadius,
+                              cornerSmoothing: 1),
                         ),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled

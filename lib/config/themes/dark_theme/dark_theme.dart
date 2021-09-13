@@ -37,32 +37,32 @@ ThemeData cantonDarkTheme() {
       fillColor: Color(0xff050505),
       hoverColor: CantonDarkColors.gray[400],
       enabledBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(
+            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
@@ -105,7 +105,7 @@ ThemeData cantonDarkTheme() {
       margin: EdgeInsets.zero,
       shape: SmoothRectangleBorder(
         borderRadius: SmoothBorderRadius.all(
-          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+          SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
         ),
         side: BorderSide(
           width: 1.5,
@@ -119,7 +119,11 @@ ThemeData cantonDarkTheme() {
       backgroundColor: CantonDarkColors.bgPrimary,
       modalBackgroundColor: CantonDarkColors.bgPrimary,
       modalElevation: 0.5,
-      shape: SquircleBorder(radius: BorderRadius.circular(55)),
+      shape: SmoothRectangleBorder(
+        borderRadius: SmoothBorderRadius.all(
+          SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
+        ),
+      ),
     ),
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: CantonDarkColors.blue),

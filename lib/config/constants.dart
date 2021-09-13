@@ -6,6 +6,8 @@ double kLineHeight = 1.25;
 
 double kLineHeightTwo = 1.5;
 
+double kDefaultBorderRadius = 15.0;
+
 bool isDarkMode(BuildContext context) {
   if (Theme.of(context).colorScheme == CantonDarkColors.colorScheme) {
     return true;

@@ -16,7 +16,7 @@ class CantonBackButton extends StatelessWidget {
       containerHeight: 60.0,
       containerWidth: 60.0,
       borderRadius: SmoothBorderRadius.all(
-        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+        SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
       ),
       padding: EdgeInsets.zero,
       prefixIcon: Icon(

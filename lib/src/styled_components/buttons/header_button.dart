@@ -28,7 +28,8 @@ class CantonHeaderButton extends StatelessWidget {
       containerWidth: size ?? 55.0,
       borderRadius: radius ??
           SmoothBorderRadius.all(
-            SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+            SmoothRadius(
+                cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
           ),
       padding: const EdgeInsets.all(0),
       prefixIcon: icon,
