@@ -1,4 +1,5 @@
 import 'package:canton_design_system/src/styled_components/buttons/primary_button.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import '../../../canton_design_system.dart';
 
 class CantonBackButton extends StatelessWidget {
@@ -14,7 +15,9 @@ class CantonBackButton extends StatelessWidget {
           : CantonColors.transparent,
       containerHeight: 60.0,
       containerWidth: 60.0,
-      borderRadius: BorderRadius.circular(50),
+      borderRadius: SmoothBorderRadius.all(
+        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+      ),
       padding: EdgeInsets.zero,
       prefixIcon: Icon(
         Iconsax.arrow_left_3,

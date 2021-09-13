@@ -1,5 +1,6 @@
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:canton_design_system/src/styled_components/buttons/primary_button.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 
 class CantonActionButton extends StatelessWidget {
@@ -25,7 +26,7 @@ class CantonActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CantonPrimaryButton(
       prefixIcon: icon,
-      borderRadius: BorderRadius.zero,
+      borderRadius: SmoothBorderRadius.zero,
       color: CantonColors.transparent,
       alignment: alignment ?? MainAxisAlignment.center,
       containerWidth: containerWidth ?? 40,

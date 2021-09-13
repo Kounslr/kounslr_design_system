@@ -1,9 +1,11 @@
+import 'package:figma_squircle/figma_squircle.dart';
+
 import '../../../canton_design_system.dart';
 import 'squircle_border.dart';
 
 class SquircleInputBorder extends InputBorder {
   final BorderSide side;
-  final BorderRadius? radius;
+  final SmoothBorderRadius? radius;
 
   @override
   bool get isOutline => true;
@@ -27,9 +29,9 @@ class SquircleInputBorder extends InputBorder {
 
   @override
   ShapeBorder scale(double t) {
-    return new SquircleBorder(
+    return new SmoothRectangleBorder(
       side: side.scale(t),
-      radius: radius,
+      borderRadius: radius!,
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/services.dart';
 
 class CantonTextInput extends StatelessWidget {
@@ -13,7 +14,7 @@ class CantonTextInput extends StatelessWidget {
   final double? containerWidth;
   final int? maxLines;
   final EdgeInsets? containerPadding;
-  final BorderRadius? radius;
+  final SmoothBorderRadius? radius;
   final BorderSide? border;
   final Color? containerColor;
   final List<TextInputFormatter>? formatters;
@@ -54,7 +55,7 @@ class CantonTextInput extends StatelessWidget {
     double? containerWidth,
     int? maxLines,
     EdgeInsets? containerPadding,
-    BorderRadius? radius,
+    SmoothBorderRadius? radius,
     BorderSide? border,
     Color? containerColor,
     List<TextInputFormatter>? formatters,
@@ -145,19 +146,27 @@ class CantonTextInput extends StatelessWidget {
               fillColor:
                   containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
             ),
@@ -185,19 +194,29 @@ class CantonTextInput extends StatelessWidget {
               fillColor:
                   containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
-                radius: radius ?? BorderRadius.all(Radius.circular(37)),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
-                  radius: radius ?? BorderRadius.all(Radius.circular(37)),
-                  side: border ?? BorderSide.none),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                side: border ?? BorderSide.none,
+              ),
               focusedErrorBorder: SquircleInputBorder(
-                  radius: radius ?? BorderRadius.all(Radius.circular(37)),
-                  side: border ?? BorderSide.none),
+                radius: radius ??
+                    SmoothBorderRadius.all(
+                        SmoothRadius(cornerRadius: 35, cornerSmoothing: 1)),
+                side: border ?? BorderSide.none,
+              ),
             ),
       );
     }

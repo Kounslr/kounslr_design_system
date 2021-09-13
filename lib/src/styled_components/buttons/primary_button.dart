@@ -1,4 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,7 @@ class CantonPrimaryButton extends StatefulWidget {
   final VoidCallback? onPressed;
   final double? minSize;
   final double? pressedOpacity;
-  final BorderRadius? borderRadius;
+  final SmoothBorderRadius? borderRadius;
   final MainAxisAlignment? alignment;
   bool get enabled => onPressed != null;
 
@@ -187,8 +188,11 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
             opacity: _opacityAnimation,
             child: DecoratedBox(
               decoration: ShapeDecoration(
-                shape: SquircleBorder(
-                    radius: widget.borderRadius ?? BorderRadius.circular(37),
+                shape: SmoothRectangleBorder(
+                    borderRadius: widget.borderRadius ??
+                        SmoothBorderRadius.all(
+                          SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
+                        ),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
                     ? Theme.of(context).colorScheme.secondary
