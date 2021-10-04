@@ -1,7 +1,6 @@
 import 'package:figma_squircle/figma_squircle.dart';
 
 import '../../../canton_design_system.dart';
-import 'squircle_border.dart';
 
 class SquircleInputBorder extends InputBorder {
   final BorderSide side;
