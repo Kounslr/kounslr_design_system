@@ -49,7 +49,9 @@ class CantonMethods {
   }
 
   static Color alternateCanvasColor(BuildContext context, {int? index, List<int?>? targetIndexes}) {
-    if (!targetIndexes!.contains(index) || index == null) return Theme.of(context).canvasColor;
+    if (![targetIndexes, index].contains(null)) {
+      if (!targetIndexes!.contains(index)) return Theme.of(context).canvasColor;
+    }
 
     if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
       return Theme.of(context).canvasColor;
