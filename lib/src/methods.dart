@@ -52,4 +52,13 @@ class CantonMethods {
 
     return htmlText.replaceAll(exp, '');
   }
+
+  Color alternateCanvasColor(BuildContext context, {int? index}) {
+    if (index != 1) return Theme.of(context).canvasColor;
+
+    if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
+      return Theme.of(context).canvasColor;
+    }
+    return Theme.of(context).backgroundColor;
+  }
 }
