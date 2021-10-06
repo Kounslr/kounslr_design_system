@@ -114,7 +114,7 @@ class CantonColors {
     },
   );
   static const MaterialColor pink = MaterialColor(
-    0xFFd73a49,
+    0xFFea4aaa,
     <int, Color>{
       100: const Color(0xFFffeef8),
       200: const Color(0xFFfedbf0),
@@ -188,12 +188,12 @@ class CantonColors {
   static var colorScheme = ColorScheme.light(
     primary: textPrimary,
     primaryVariant: blue,
+    onPrimary: blue,
     secondary: CupertinoColors.systemGrey6,
     secondaryVariant: CupertinoColors.secondaryLabel,
     background: green,
     surface: yellow,
     error: red[700]!,
-    onPrimary: blue,
     onSecondary: gray[200]!,
     onBackground: black,
     onSurface: yellow[100]!,
