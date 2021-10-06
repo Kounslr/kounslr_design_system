@@ -157,8 +157,12 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTi
       return Text(
         widget.buttonText!,
         style: Theme.of(context).textTheme.button?.copyWith(
-              color:
-                  enabled ? (widget.textColor ?? CantonColors.white) : Theme.of(context).colorScheme.secondaryVariant,
+              color: enabled
+                  ? (widget.textColor ??
+                      (widget.color!.value == Theme.of(context).primaryColor.value
+                          ? CantonColors.white
+                          : Theme.of(context).colorScheme.primary))
+                  : Theme.of(context).colorScheme.secondaryVariant,
             ),
       );
     }
