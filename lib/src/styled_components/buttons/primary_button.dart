@@ -33,8 +33,7 @@ class CantonPrimaryButton extends StatefulWidget {
     this.borderRadius,
     this.alignment,
     this.onPressed,
-  })  : assert(pressedOpacity == null ||
-            (pressedOpacity >= 0.0 && pressedOpacity <= 1.0)),
+  })  : assert(pressedOpacity == null || (pressedOpacity >= 0.0 && pressedOpacity <= 1.0)),
         super(key: key);
 
   final Widget? prefixIcon, suffixIcon;
@@ -57,13 +56,11 @@ class CantonPrimaryButton extends StatefulWidget {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(FlagProperty('enabled', value: enabled, ifFalse: 'disabled'));
+    properties.add(FlagProperty('enabled', value: enabled, ifFalse: 'disabled'));
   }
 }
 
-class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
-    with SingleTickerProviderStateMixin {
+class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTickerProviderStateMixin {
   static const Duration kFadeOutDuration = Duration(milliseconds: 10);
   static const Duration kFadeInDuration = Duration(milliseconds: 100);
   final Tween<double> _opacityTween = Tween<double>(begin: 1.0);
@@ -79,9 +76,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
       value: 0.0,
       vsync: this,
     );
-    _opacityAnimation = _animationController
-        .drive(CurveTween(curve: Curves.decelerate))
-        .drive(_opacityTween);
+    _opacityAnimation = _animationController.drive(CurveTween(curve: Curves.decelerate)).drive(_opacityTween);
     _setTween();
   }
 
@@ -162,9 +157,8 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
       return Text(
         widget.buttonText!,
         style: Theme.of(context).textTheme.button?.copyWith(
-              color: enabled
-                  ? (widget.textColor ?? CantonColors.white)
-                  : Theme.of(context).colorScheme.secondaryVariant,
+              color:
+                  enabled ? (widget.textColor ?? CantonColors.white) : Theme.of(context).colorScheme.secondaryVariant,
             ),
       );
     }
@@ -191,9 +185,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                 shape: SmoothRectangleBorder(
                     borderRadius: widget.borderRadius ??
                         SmoothBorderRadius.all(
-                          SmoothRadius(
-                              cornerRadius: kDefaultBorderRadius,
-                              cornerSmoothing: 1),
+                          SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
                         ),
                     side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
@@ -205,13 +197,11 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                 width: widget.containerWidth ?? size.width,
                 padding: widget.padding ??
                     ((![CantonColors.transparent, null].contains(widget.color))
-                        ? _kBackgroundButtonPadding
-                        : _kButtonPadding),
-                child: (![CantonColors.transparent, null]
-                        .contains(widget.color))
+                        ? _kButtonPadding
+                        : _kBackgroundButtonPadding),
+                child: (![CantonColors.transparent, null].contains(widget.color))
                     ? Row(
-                        mainAxisAlignment:
-                            widget.alignment ?? MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: widget.alignment ?? MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           prefixIconWidget(),
@@ -221,8 +211,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton>
                       )
                     : [widget.prefixIcon, widget.suffixIcon].contains(null)
                         ? Row(
-                            mainAxisAlignment: widget.alignment ??
-                                MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: widget.alignment ?? MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               prefixIconWidget(),
