@@ -5,18 +5,16 @@ class CantonMethods {
   static void defocusTextfield(BuildContext context) => FocusScope.of(context).requestFocus(new FocusNode());
 
   /// Default transition for switching views
-  static Future<void> viewTransition(BuildContext context, Widget view) => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) {
-            return view;
-          },
-          // child: view,
-          // type: PageTransitionType.rightToLeft,
-          // curve: Curves.ease,
-          // duration: Duration(milliseconds: 300),
-        ),
-      );
+  static Future<void> viewTransition(BuildContext context, Widget view, {void Function()? onNavigateView}) {
+    if (onNavigateView != null) onNavigateView();
+
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => view,
+      ),
+    );
+  }
 
   /// Adds '...' to the end of a string
   static String addDotsToString(String string, int index) {
