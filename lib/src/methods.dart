@@ -6,12 +6,13 @@ class CantonMethods {
 
   /// Default transition for switching views
   static Future<void> viewTransition(BuildContext context, Widget view, {void Function()? onNavigateView}) {
-    if (onNavigateView != null) onNavigateView();
-
     return Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => view,
+        builder: (context) {
+          if (onNavigateView != null) onNavigateView();
+          return view;
+        },
       ),
     );
   }
