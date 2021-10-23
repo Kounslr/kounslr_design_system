@@ -17,6 +17,8 @@ class SquircleBorder extends ShapeBorder {
   @override
   EdgeInsetsGeometry get dimensions => EdgeInsets.all(side.width);
 
+  SquircleBorder none() => SquircleBorder(radius: BorderRadius.zero);
+
   @override
   ShapeBorder scale(double t) {
     return new SquircleBorder(
@@ -117,8 +119,7 @@ class SquircleBorder extends ShapeBorder {
       case BorderStyle.none:
         break;
       case BorderStyle.solid:
-        var path = getOuterPath(rect.deflate(side.width / 2.0),
-            textDirection: textDirection);
+        var path = getOuterPath(rect.deflate(side.width / 2.0), textDirection: textDirection);
         canvas.drawPath(path, side.toPaint());
     }
   }
