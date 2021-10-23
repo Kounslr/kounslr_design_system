@@ -9,7 +9,6 @@ ThemeData cantonLightTheme() {
   return base.copyWith(
     textTheme: MobileTextTheme.theme(base),
     primaryIconTheme: IconThemeData(size: 24, color: CantonColors.iconPrimary),
-    accentIconTheme: IconThemeData(size: 24, color: CantonColors.iconPrimary),
     dividerTheme: DividerThemeData(
       space: 0,
       thickness: 0.5,
@@ -38,32 +37,28 @@ ThemeData cantonLightTheme() {
       hoverColor: CantonColors.gray[400],
 
       enabledBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
@@ -121,8 +116,7 @@ ThemeData cantonLightTheme() {
       modalElevation: 0.5,
       shape: SmoothRectangleBorder(
         borderRadius: SmoothBorderRadius.vertical(
-          top: SmoothRadius(
-              cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
+          top: SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
         ),
         side: BorderSide(
           width: 1.5,
@@ -136,7 +130,8 @@ ThemeData cantonLightTheme() {
     appBarTheme: AppBarTheme(
       color: CantonColors.transparent,
       foregroundColor: CantonColors.transparent,
-      textTheme: MobileTextTheme.theme(base),
+      titleTextStyle: MobileTextTheme.theme(base).headline4,
+      toolbarTextStyle: MobileTextTheme.theme(base).headline5,
       elevation: 0.0,
     ),
     colorScheme: CantonColors.colorScheme,
@@ -152,12 +147,8 @@ ThemeData cantonLightTheme() {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
       selectedItemColor: base.primaryColor,
-      selectedLabelStyle: MobileTextTheme.theme(base)
-          .bodyText2
-          ?.copyWith(fontWeight: FontWeight.w500),
-      unselectedLabelStyle: MobileTextTheme.theme(base)
-          .bodyText2
-          ?.copyWith(fontWeight: FontWeight.w500),
+      selectedLabelStyle: MobileTextTheme.theme(base).bodyText2?.copyWith(fontWeight: FontWeight.w500),
+      unselectedLabelStyle: MobileTextTheme.theme(base).bodyText2?.copyWith(fontWeight: FontWeight.w500),
       backgroundColor: CantonColors.bgPrimary,
       type: BottomNavigationBarType.fixed,
       elevation: 0.0,

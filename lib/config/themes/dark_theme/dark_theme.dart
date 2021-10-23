@@ -37,32 +37,28 @@ ThemeData cantonDarkTheme() {
       fillColor: Color(0xff050505),
       hoverColor: CantonDarkColors.gray[400],
       enabledBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       errorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
         ),
       ),
       focusedErrorBorder: SquircleInputBorder(
-        radius: SmoothBorderRadius.all(SmoothRadius(
-            cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
+        radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
           color: CantonColors.transparent,
           width: 1.5,
@@ -125,23 +121,19 @@ ThemeData cantonDarkTheme() {
         ),
       ),
     ),
-    textSelectionTheme:
-        const TextSelectionThemeData(cursorColor: CantonDarkColors.blue),
+    textSelectionTheme: const TextSelectionThemeData(cursorColor: CantonDarkColors.blue),
     appBarTheme: AppBarTheme(
       color: CantonColors.transparent,
       foregroundColor: CantonColors.transparent,
-      textTheme: MobileTextTheme.theme(base),
+      titleTextStyle: MobileTextTheme.theme(base).headline4,
+      toolbarTextStyle: MobileTextTheme.theme(base).headline5,
       elevation: 0.0,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       unselectedItemColor: CantonDarkColors.colorScheme.secondaryVariant,
       selectedItemColor: base.primaryColor,
-      selectedLabelStyle: MobileTextTheme.theme(base)
-          .bodyText2
-          ?.copyWith(fontWeight: FontWeight.w500),
-      unselectedLabelStyle: MobileTextTheme.theme(base)
-          .bodyText2
-          ?.copyWith(fontWeight: FontWeight.w500),
+      selectedLabelStyle: MobileTextTheme.theme(base).bodyText2?.copyWith(fontWeight: FontWeight.w500),
+      unselectedLabelStyle: MobileTextTheme.theme(base).bodyText2?.copyWith(fontWeight: FontWeight.w500),
       backgroundColor: CantonDarkColors.bgCanvasMobile,
       type: BottomNavigationBarType.fixed,
       elevation: 0.0,

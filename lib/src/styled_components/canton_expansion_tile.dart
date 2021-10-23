@@ -82,14 +82,10 @@ class CantonExpansionTile extends StatefulWidget {
   _CantonExpansionTileState createState() => _CantonExpansionTileState();
 }
 
-class _CantonExpansionTileState extends State<CantonExpansionTile>
-    with SingleTickerProviderStateMixin {
-  static final Animatable<double> _easeOutTween =
-      CurveTween(curve: Curves.easeOut);
-  static final Animatable<double> _easeInTween =
-      CurveTween(curve: Curves.easeIn);
-  static final Animatable<double> _halfTween =
-      Tween<double>(begin: 0.0, end: 0.5);
+class _CantonExpansionTileState extends State<CantonExpansionTile> with SingleTickerProviderStateMixin {
+  static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
+  static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
+  static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
 
   final ColorTween _borderColorTween = ColorTween();
   final ColorTween _headerColorTween = ColorTween();
@@ -113,11 +109,9 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
     _iconTurns = _controller.drive(_halfTween.chain(_easeInTween));
     _headerColor = _controller.drive(_headerColorTween.chain(_easeInTween));
     _iconColor = _controller.drive(_iconColorTween.chain(_easeInTween));
-    _backgroundColor =
-        _controller.drive(_backgroundColorTween.chain(_easeOutTween));
+    _backgroundColor = _controller.drive(_backgroundColorTween.chain(_easeOutTween));
 
-    _isExpanded =
-        PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
+    _isExpanded = PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
     if (_isExpanded) _controller.value = 1.0;
   }
 
@@ -142,8 +136,7 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
       }
       PageStorage.of(context)?.writeState(context, _isExpanded);
     });
-    if (widget.onExpansionChanged != null)
-      widget.onExpansionChanged!(_isExpanded);
+    if (widget.onExpansionChanged != null) widget.onExpansionChanged!(_isExpanded);
   }
 
   Widget _buildChildren(BuildContext context, Widget? child) {
@@ -172,10 +165,7 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
                   side: BorderSide.none,
                 ),
                 title: DefaultTextStyle(
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline6!
-                      .copyWith(color: titleColor),
+                  style: Theme.of(context).textTheme.headline6!.copyWith(color: titleColor),
                   child: widget.title,
                 ),
                 trailing: widget.trailing ??
@@ -206,10 +196,10 @@ class _CantonExpansionTileState extends State<CantonExpansionTile>
     _borderColorTween..end = theme.dividerColor;
     _headerColorTween
       ..begin = theme.textTheme.subtitle1!.color
-      ..end = theme.accentColor;
+      ..end = theme.colorScheme.primary;
     _iconColorTween
       ..begin = theme.unselectedWidgetColor
-      ..end = theme.accentColor;
+      ..end = theme.colorScheme.primary;
     _backgroundColorTween..end = widget.backgroundColor;
     super.didChangeDependencies();
   }
