@@ -8,11 +8,14 @@ class CantonMethods {
   static Future<void> viewTransition(BuildContext context, Widget view, {void Function()? onNavigateView}) {
     return Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) {
-          if (onNavigateView != null) onNavigateView();
-          return view;
-        },
+      PageTransition(
+        type: PageTransitionType.rightToLeft,
+        child: Builder(
+          builder: (context) {
+            if (onNavigateView != null) onNavigateView();
+            return view;
+          },
+        ),
       ),
     );
   }
