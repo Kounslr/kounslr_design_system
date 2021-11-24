@@ -11,7 +11,6 @@ class CantonMethods {
       PageTransition(
         type: PageTransitionType.rightToLeft,
         curve: Curves.easeInOut,
-        inheritTheme: true,
         child: Builder(
           builder: (context) {
             if (onNavigateView != null) onNavigateView();
