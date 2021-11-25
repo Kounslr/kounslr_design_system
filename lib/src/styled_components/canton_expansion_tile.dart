@@ -148,12 +148,13 @@ class _CantonExpansionTileState extends State<CantonExpansionTile> with SingleTi
     return Container(
       margin: widget.childrenPadding,
       decoration: BoxDecoration(
-          color: _backgroundColor.value ?? Colors.transparent,
-          borderRadius: widget.radius,
-          border: Border(
-            top: BorderSide(color: CantonColors.transparent),
-            bottom: BorderSide(color: CantonColors.transparent),
-          )),
+        color: _backgroundColor.value ?? Colors.transparent,
+        borderRadius: widget.radius,
+        // border: Border(
+        //   top: BorderSide(color: CantonColors.transparent),
+        //   bottom: BorderSide(color: CantonColors.transparent),
+        // ),
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
