@@ -16,6 +16,7 @@ export 'text_inputs/tag_text_input/tag_text_input.dart';
 export 'squircle_borders/squircle_border.dart';
 export 'squircle_borders/squircle_input_border.dart';
 export 'squircle_borders/squircle_border_clipper.dart';
+export 'squircle_borders/smooth_borders.dart';
 
 // View Headers
 export 'view_headers/view_header_one.dart';
