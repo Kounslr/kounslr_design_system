@@ -30,7 +30,7 @@ class CantonExpansionTile extends StatefulWidget {
     this.headerBackgroundColor,
     this.leading,
     required this.title,
-    this.radius,
+    this.decoration,
     this.backgroundColor,
     this.iconColor,
     this.onExpansionChanged,
@@ -77,7 +77,7 @@ class CantonExpansionTile extends StatefulWidget {
   /// Specifies if the list tile is initially expanded (true) or collapsed (false, the default).
   final bool initiallyExpanded;
 
-  final BorderRadius? radius;
+  final Decoration? decoration;
 
   final EdgeInsetsGeometry? childrenPadding;
 
@@ -147,14 +147,14 @@ class _CantonExpansionTileState extends State<CantonExpansionTile> with SingleTi
 
     return Container(
       margin: widget.childrenPadding,
-      decoration: BoxDecoration(
-        color: _backgroundColor.value ?? Colors.transparent,
-        borderRadius: widget.radius,
-        // border: Border(
-        //   top: BorderSide(color: CantonColors.transparent),
-        //   bottom: BorderSide(color: CantonColors.transparent),
-        // ),
-      ),
+      decoration: widget.decoration ??
+          BoxDecoration(
+            color: _backgroundColor.value ?? Colors.transparent,
+            border: Border(
+              top: BorderSide(color: CantonColors.transparent),
+              bottom: BorderSide(color: CantonColors.transparent),
+            ),
+          ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
