@@ -143,34 +143,25 @@ class CantonTextInput extends StatelessWidget {
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
-              fillColor:
-                  containerColor ?? Theme.of(context).colorScheme.secondary,
+              fillColor: containerColor ?? Theme.of(context).colorScheme.secondary,
               enabledBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
             ),
@@ -178,6 +169,13 @@ class CantonTextInput extends StatelessWidget {
     }
 
     Widget _textInputField() {
+      Color fillColor() {
+        if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
+          return Theme.of(context).colorScheme.onSecondary;
+        }
+        return Theme.of(context).colorScheme.secondary;
+      }
+
       return TextField(
         obscureText: false,
         onChanged: onChanged,
@@ -195,34 +193,25 @@ class CantonTextInput extends StatelessWidget {
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
-              fillColor:
-                  containerColor ?? Theme.of(context).colorScheme.secondary,
+              fillColor: containerColor ?? fillColor(),
               enabledBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               errorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
               focusedErrorBorder: SquircleInputBorder(
                 radius: radius ??
-                    SmoothBorderRadius.all(SmoothRadius(
-                        cornerRadius: kDefaultBorderRadius,
-                        cornerSmoothing: 1)),
+                    SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
                 side: border ?? BorderSide.none,
               ),
             ),
@@ -232,14 +221,12 @@ class CantonTextInput extends StatelessWidget {
     Widget textInput() {
       if (isTextFormField!) {
         return Padding(
-          padding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: _textInputFormField(),
         );
       } else {
         return Padding(
-          padding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: _textInputField(),
         );
       }
