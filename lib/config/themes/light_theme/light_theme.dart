@@ -2,6 +2,7 @@ import 'package:canton_design_system/canton_design_system.dart';
 import 'package:canton_design_system/config/themes/light_theme/light_color_palette.dart';
 import 'package:canton_design_system/config/themes/text_themes/mobile_text_theme.dart';
 import 'package:figma_squircle/figma_squircle.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 ThemeData cantonLightTheme() {
@@ -33,9 +34,8 @@ ThemeData cantonLightTheme() {
       contentPadding: const EdgeInsets.all(15),
       filled: true,
       isCollapsed: true,
-      fillColor: CantonColors.gray[300],
+      fillColor: CupertinoColors.systemGrey6,
       hoverColor: CantonColors.gray[400],
-
       enabledBorder: SquircleInputBorder(
         radius: SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
         side: BorderSide(
