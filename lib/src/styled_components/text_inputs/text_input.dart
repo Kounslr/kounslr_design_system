@@ -86,6 +86,13 @@ class CantonTextInput extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+    Color fillColor() {
+      if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
+        return Color(0xFF2D2D2F);
+      }
+      return Theme.of(context).colorScheme.secondary;
+    }
+
     Widget _labelTextWidget() {
       if (labelText != null) {
         return Column(
@@ -143,7 +150,7 @@ class CantonTextInput extends StatelessWidget {
               hintText: hintText,
               prefixIcon: _prefixIconWidget(),
               suffixIcon: _suffixIconWidget(),
-              fillColor: containerColor ?? Theme.of(context).colorScheme.secondary,
+              fillColor: containerColor ?? fillColor(),
               enabledBorder: SquircleInputBorder(
                 radius: radius ??
                     SmoothBorderRadius.all(SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1)),
@@ -169,13 +176,6 @@ class CantonTextInput extends StatelessWidget {
     }
 
     Widget _textInputField() {
-      Color fillColor() {
-        if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-          return Color(0xFF323235);
-        }
-        return Theme.of(context).colorScheme.secondary;
-      }
-
       return TextField(
         obscureText: false,
         onChanged: onChanged,
