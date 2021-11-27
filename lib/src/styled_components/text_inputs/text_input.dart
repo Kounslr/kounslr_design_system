@@ -171,7 +171,7 @@ class CantonTextInput extends StatelessWidget {
     Widget _textInputField() {
       Color fillColor() {
         if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-          return Theme.of(context).colorScheme.onSecondary;
+          return Color(0xFF323235);
         }
         return Theme.of(context).colorScheme.secondary;
       }
