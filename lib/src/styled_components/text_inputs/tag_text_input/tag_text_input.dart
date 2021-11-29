@@ -93,8 +93,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
     List<Widget> _tags = [];
     for (var i = 0; i < _tagsStringContents!.length; i++) {
       final String stringContent = _tagsStringContents![i];
-      final String stringContentWithHash =
-          widget.tagsStyler!.showHashtag ? "#$stringContent" : stringContent;
+      final String stringContentWithHash = widget.tagsStyler!.showHashtag ? "#$stringContent" : stringContent;
       final Container tag = Container(
         padding: widget.tagsStyler!.tagPadding,
         decoration: widget.tagsStyler!.tagDecoration,
@@ -158,16 +157,14 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
       style: widget.textFieldStyler!.textStyle,
       inputFormatters: _textInputFormatters(),
       decoration: InputDecoration(
-        contentPadding:
-            widget.textFieldStyler!.contentPadding ?? EdgeInsets.all(20),
+        contentPadding: widget.textFieldStyler!.contentPadding ?? EdgeInsets.all(20),
         isDense: widget.textFieldStyler!.isDense,
         helperText: widget.textFieldStyler!.helperText,
         helperStyle: widget.textFieldStyler!.helperStyle,
         hintText: !_showPrefixIcon ? widget.textFieldStyler!.hintText : null,
         hintStyle: !_showPrefixIcon ? widget.textFieldStyler!.hintStyle : null,
         filled: widget.textFieldStyler!.textFieldFilled,
-        fillColor: widget.textFieldStyler!.textFieldFilledColor ??
-            Theme.of(context).colorScheme.onSecondary,
+        fillColor: widget.textFieldStyler!.textFieldFilledColor ?? Theme.of(context).inputDecorationTheme.fillColor,
         enabled: widget.textFieldStyler!.textFieldEnabled,
         border: widget.textFieldStyler!.textFieldBorder,
         focusedBorder: widget.textFieldStyler!.textFieldFocusedBorder,
@@ -175,8 +172,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
         enabledBorder: widget.textFieldStyler!.textFieldEnabledBorder,
         prefixIcon: _showPrefixIcon
             ? ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxWidth: _deviceWidth * widget.tagsDistanceFromBorderEnd),
+                constraints: BoxConstraints(maxWidth: _deviceWidth * widget.tagsDistanceFromBorderEnd),
                 child: Container(
                   margin: widget.scrollableTagsMargin,
                   padding: widget.scrollableTagsPadding,
@@ -197,8 +193,7 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
         final String val = value.trim().toLowerCase();
         if (value.length > 0) {
           _textEditingController.clear();
-          if (widget.maxTags! > _tagsStringContents!.length &&
-              !_tagsStringContents!.contains(val)) {
+          if (widget.maxTags! > _tagsStringContents!.length && !_tagsStringContents!.contains(val)) {
             widget.onTag!(val);
             if (!_showPrefixIcon) {
               setState(() {
@@ -216,18 +211,14 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
       },
       onChanged: (value) {
         final List<String> splitedTagsList = value.split(" ");
-        final int indexer = splitedTagsList.length > 1
-            ? splitedTagsList.length - 2
-            : splitedTagsList.length - 1;
-        final String lastLastTag =
-            splitedTagsList[indexer].trim().toLowerCase();
+        final int indexer = splitedTagsList.length > 1 ? splitedTagsList.length - 2 : splitedTagsList.length - 1;
+        final String lastLastTag = splitedTagsList[indexer].trim().toLowerCase();
 
         if (value.contains(" ")) {
           if (lastLastTag.length > 0) {
             _textEditingController.clear();
 
-            if (!_tagsStringContents!.contains(lastLastTag) &&
-                widget.maxTags! > _tagsStringContents!.length) {
+            if (!_tagsStringContents!.contains(lastLastTag) && widget.maxTags! > _tagsStringContents!.length) {
               widget.onTag!(lastLastTag);
 
               if (!_showPrefixIcon) {
