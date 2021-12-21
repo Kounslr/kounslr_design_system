@@ -1,10 +1,7 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 
 const EdgeInsets _kButtonPadding = EdgeInsets.all(16.0);
 const EdgeInsets _kBackgroundButtonPadding = EdgeInsets.symmetric(
