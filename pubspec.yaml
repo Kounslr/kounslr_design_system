@@ -397,6 +397,34 @@ flutter:
         - asset: lib/assets/fonts/Times-New-Roman-Italic.ttf
           weight: 400
           style: italic
+    #### New York - Serif typeface
+    - family: New York
+      fonts:
+        - asset: lib/assets/fonts/NewYork.ttf
+          weight: 400
+        - asset: lib/assets/fonts/NewYorkItalic.ttf
+          weight: 400
+          style: italic
+        - asset: lib/assets/fonts/NewYork.ttf
+          weight: 500
+        - asset: lib/assets/fonts/NewYorkItalic.ttf
+          weight: 500
+          style: italic
+        - asset: lib/assets/fonts/NewYork.ttf
+          weight: 600
+        - asset: lib/assets/fonts/NewYorkItalic.ttf
+          weight: 600
+          style: italic
+        - asset: lib/assets/fonts/NewYork.ttf
+          weight: 700
+        - asset: lib/assets/fonts/NewYorkItalic.ttf
+          weight: 700
+          style: italic
+        - asset: lib/assets/fonts/NewYork.ttf
+          weight: 800
+        - asset: lib/assets/fonts/NewYorkItalic.ttf
+          weight: 800
+          style: italic
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
