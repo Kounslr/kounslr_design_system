@@ -1,5 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 
 class CantonHeaderButton extends StatelessWidget {
   const CantonHeaderButton({
@@ -28,14 +27,11 @@ class CantonHeaderButton extends StatelessWidget {
       containerWidth: size ?? 55.0,
       borderRadius: radius ??
           SmoothBorderRadius.all(
-            SmoothRadius(
-                cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
+            SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
           ),
       padding: const EdgeInsets.all(0),
       prefixIcon: icon,
-      alignment: [null, false].contains(isClear)
-          ? MainAxisAlignment.center
-          : MainAxisAlignment.end,
+      alignment: [null, false].contains(isClear) ? MainAxisAlignment.center : MainAxisAlignment.end,
       onPressed: onPressed ?? () {},
     );
   }
