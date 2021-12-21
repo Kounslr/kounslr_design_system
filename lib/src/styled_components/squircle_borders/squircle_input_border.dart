@@ -1,5 +1,3 @@
-import 'package:figma_squircle/figma_squircle.dart';
-
 import '../../../canton_design_system.dart';
 
 class SquircleInputBorder extends InputBorder {
@@ -126,16 +124,12 @@ class SquircleInputBorder extends InputBorder {
 
   @override
   void paint(Canvas canvas, Rect rect,
-      {double? gapStart,
-      double gapExtent = 0.0,
-      double gapPercentage = 0.0,
-      TextDirection? textDirection}) {
+      {double? gapStart, double gapExtent = 0.0, double gapPercentage = 0.0, TextDirection? textDirection}) {
     switch (side.style) {
       case BorderStyle.none:
         break;
       case BorderStyle.solid:
-        var path = getOuterPath(rect.deflate(side.width / 2.0),
-            textDirection: textDirection);
+        var path = getOuterPath(rect.deflate(side.width / 2.0), textDirection: textDirection);
         canvas.drawPath(path, side.toPaint());
     }
   }
