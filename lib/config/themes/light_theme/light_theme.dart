@@ -1,9 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_design_system/config/themes/light_theme/light_color_palette.dart';
-import 'package:canton_design_system/config/themes/text_themes/mobile_text_theme.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 ThemeData cantonLightTheme() {
   final ThemeData base = ThemeData.light();
