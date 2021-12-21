@@ -1,5 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_design_system/config/constants.dart';
 
 class DesktopTextTheme {
   static const double kH00 = 48.0;
