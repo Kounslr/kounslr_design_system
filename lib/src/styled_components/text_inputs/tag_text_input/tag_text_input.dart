@@ -32,6 +32,8 @@ class CantonTagTextInput extends StatefulWidget {
   ///Maximum amount of tags in text field
   final int? maxTags;
 
+  final TextEditingController? controller;
+
   const CantonTagTextInput(
       {Key? key,
       this.tagsDistanceFromBorderEnd = 0.725,
@@ -43,6 +45,7 @@ class CantonTagTextInput extends StatefulWidget {
       this.onDelete,
       this.initialTags,
       this.maxCharactersPerTag,
+      this.controller,
       required this.maxTags})
       : super(key: key);
 
@@ -56,6 +59,8 @@ class _CantonTagTextInputState extends State<CantonTagTextInput> {
   ScrollController _scrollController = ScrollController();
   bool _showPrefixIcon = false;
   late double _deviceWidth;
+
+  // _textEditingController = widget.controller ?? TextEditingController();
 
   @override
   void initState() {
