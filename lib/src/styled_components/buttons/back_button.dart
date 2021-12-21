@@ -1,5 +1,3 @@
-import 'package:canton_design_system/src/styled_components/buttons/primary_button.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 import '../../../canton_design_system.dart';
 
 class CantonBackButton extends StatelessWidget {
@@ -10,9 +8,7 @@ class CantonBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CantonPrimaryButton(
-      color: [null, false].contains(isClear)
-          ? Theme.of(context).colorScheme.secondary
-          : CantonColors.transparent,
+      color: [null, false].contains(isClear) ? Theme.of(context).colorScheme.secondary : CantonColors.transparent,
       containerHeight: 60.0,
       containerWidth: 60.0,
       borderRadius: SmoothBorderRadius.all(
@@ -26,9 +22,7 @@ class CantonBackButton extends StatelessWidget {
             : Theme.of(context).primaryColor,
         size: 27,
       ),
-      alignment: [null, false].contains(isClear)
-          ? MainAxisAlignment.center
-          : MainAxisAlignment.start,
+      alignment: [null, false].contains(isClear) ? MainAxisAlignment.center : MainAxisAlignment.start,
       onPressed: onPressed ?? () => Navigator.of(context).pop(),
     );
   }
