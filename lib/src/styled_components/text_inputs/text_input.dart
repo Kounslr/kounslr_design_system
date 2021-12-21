@@ -1,5 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/services.dart';
 
 class CantonTextInput extends StatelessWidget {
