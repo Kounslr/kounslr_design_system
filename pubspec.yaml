@@ -384,21 +384,21 @@ flutter:
         - asset: lib/assets/fonts/Inter-Italic.otf
           weight: 400
           style: italic
-    #### Times New Roman - Serif typeface
-    - family: Times New Roman
-      fonts:
-        - asset: lib/assets/fonts/Times-New-Roman-Bold.ttf
-          weight: 800
-        - asset: lib/assets/fonts/Times-New-Roman-Bold-Italic.ttf
-          weight: 800
-          style: italic
-        - asset: lib/assets/fonts/Times-New-Roman.ttf
-          weight: 400
-        - asset: lib/assets/fonts/Times-New-Roman-Italic.ttf
-          weight: 400
-          style: italic
+    # #### Times New Roman - Serif typeface
+    # - family: Times New Roman
+    #   fonts:
+    #     - asset: lib/assets/fonts/Times-New-Roman-Bold.ttf
+    #       weight: 800
+    #     - asset: lib/assets/fonts/Times-New-Roman-Bold-Italic.ttf
+    #       weight: 800
+    #       style: italic
+    #     - asset: lib/assets/fonts/Times-New-Roman.ttf
+    #       weight: 400
+    #     - asset: lib/assets/fonts/Times-New-Roman-Italic.ttf
+    #       weight: 400
+    #       style: italic
     #### New York - Serif typeface
-    - family: New York
+    - family: NewYork
       fonts:
         - asset: lib/assets/fonts/NewYork.ttf
           weight: 400
