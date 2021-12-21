@@ -1,5 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_design_system/config/constants.dart';
 
 class MobileTextTheme {
   static const double kH00 = 40.0;
