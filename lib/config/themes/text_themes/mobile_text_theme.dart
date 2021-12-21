@@ -27,7 +27,7 @@ class MobileTextTheme {
         color: lightDarkModeDefaultTextColor(base),
       ),
       headline3: TextStyle(
-        fontFamily: kFontFamily,
+        fontFamily: 'New York',
         fontWeight: FontWeight.w800,
         fontSize: kH1,
         height: kLineHeight,
