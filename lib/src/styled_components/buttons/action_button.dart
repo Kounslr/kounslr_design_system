@@ -1,7 +1,4 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_design_system/src/styled_components/buttons/primary_button.dart';
-import 'package:figma_squircle/figma_squircle.dart';
-import 'package:flutter/material.dart';
 
 class CantonActionButton extends StatelessWidget {
   final Widget icon;
