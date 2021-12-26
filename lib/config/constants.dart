@@ -18,8 +18,8 @@ bool isDarkMode(BuildContext context) {
 
 Color? lightDarkModeDefaultTextColor(ThemeData themeData) {
   if (themeData.brightness == Brightness.dark) {
-    return CantonColors.gray[100];
+    return CantonColors.white;
   } else {
-    return CantonColors.gray;
+    return CantonColors.black;
   }
 }
