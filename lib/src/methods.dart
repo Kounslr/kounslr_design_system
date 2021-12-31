@@ -69,4 +69,16 @@ class CantonMethods {
 
     return Theme.of(context).backgroundColor;
   }
+
+  static Color alternateCanvasColorType3(BuildContext context, {int? index, List<int?>? targetIndexes}) {
+    if (![targetIndexes, index].contains(null)) {
+      if (!targetIndexes!.contains(index)) return Theme.of(context).colorScheme.onSecondary;
+    }
+
+    if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
+      return Theme.of(context).colorScheme.onSecondary;
+    }
+
+    return Theme.of(context).cardColor;
+  }
 }
