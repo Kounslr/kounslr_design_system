@@ -16,6 +16,7 @@ class CantonPrimaryButton extends StatefulWidget {
     this.suffixIcon,
     this.buttonText,
     this.iconColor,
+    this.shape,
     this.textColor,
     this.padding,
     this.border,
@@ -45,6 +46,7 @@ class CantonPrimaryButton extends StatefulWidget {
   final double? pressedOpacity;
   final SmoothBorderRadius? borderRadius;
   final MainAxisAlignment? alignment;
+  final ShapeBorder? shape;
   bool get enabled => onPressed != null;
 
   @override
@@ -183,12 +185,13 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTi
             opacity: _opacityAnimation,
             child: DecoratedBox(
               decoration: ShapeDecoration(
-                shape: SmoothRectangleBorder(
-                    borderRadius: widget.borderRadius ??
-                        SmoothBorderRadius.all(
-                          SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
-                        ),
-                    side: widget.border ?? BorderSide.none),
+                shape: widget.shape ??
+                    SmoothRectangleBorder(
+                        borderRadius: widget.borderRadius ??
+                            SmoothBorderRadius.all(
+                              SmoothRadius(cornerRadius: kDefaultBorderRadius, cornerSmoothing: 1),
+                            ),
+                        side: widget.border ?? BorderSide.none),
                 color: widget.color != null && !enabled
                     ? Theme.of(context).colorScheme.secondary
                     : widget.color ?? Theme.of(context).primaryColor,
