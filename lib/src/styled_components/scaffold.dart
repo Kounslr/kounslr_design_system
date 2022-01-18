@@ -45,3 +45,35 @@ class CantonScaffold extends StatelessWidget {
     );
   }
 }
+
+class CantonScaffoldType2 extends StatelessWidget {
+  final Widget? body;
+  final Widget? bottomNavBar;
+  final EdgeInsets? padding;
+  final Color? backgroundColor;
+  final bool? resizeToAvoidBottomInset, safeArea;
+
+  const CantonScaffoldType2({
+    Key? key,
+    this.body,
+    this.bottomNavBar,
+    this.padding = const EdgeInsets.symmetric(horizontal: 17),
+    this.backgroundColor,
+    this.resizeToAvoidBottomInset,
+    this.safeArea = true,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => CantonMethods.defocusTextfield(context),
+      child: SafeArea(
+        child: Container(
+          padding: padding ?? const EdgeInsets.symmetric(horizontal: 17),
+          color: backgroundColor,
+          child: body,
+        ),
+      ),
+    );
+  }
+}
