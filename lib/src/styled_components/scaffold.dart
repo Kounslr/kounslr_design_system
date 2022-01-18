@@ -70,7 +70,7 @@ class CantonScaffoldType2 extends StatelessWidget {
       child: SafeArea(
         child: Container(
           padding: padding ?? const EdgeInsets.symmetric(horizontal: 17),
-          color: backgroundColor,
+          color: backgroundColor ?? Theme.of(context).backgroundColor,
           child: body,
         ),
       ),
