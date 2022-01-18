@@ -185,7 +185,7 @@ class CantonDarkColors {
   static Color bgWarningInverse = Color(0xFFbb8009);
 
   static var colorScheme = ColorScheme.dark(
-    primary: textPrimary,
+    primary: white,
     primaryVariant: blue,
     secondary: CupertinoColors.systemGrey6.darkColor,
     secondaryVariant: CupertinoColors.secondaryLabel.darkColor,

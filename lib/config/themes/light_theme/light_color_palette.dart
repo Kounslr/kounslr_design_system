@@ -186,7 +186,7 @@ class CantonColors {
   static Color? bgWarningInverse = yellow[500];
 
   static var colorScheme = ColorScheme.light(
-    primary: textPrimary,
+    primary: black,
     primaryVariant: blue,
     onPrimary: blue,
     secondary: CupertinoColors.systemGrey6,
@@ -195,7 +195,7 @@ class CantonColors {
     surface: yellow,
     error: red[700]!,
     onSecondary: gray[200]!,
-    onBackground: black,
+    onBackground: white,
     onSurface: yellow[100]!,
     onError: red[100]!,
   );
