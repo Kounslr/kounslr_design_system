@@ -1,9 +1,9 @@
-import '../../canton_design_system.dart';
+import '../../kounslr_design_system.dart';
 
-class CantonTag extends StatelessWidget {
+class KounslrTag extends StatelessWidget {
   final Color? color;
 
-  const CantonTag({Key? key, this.color}) : super(key: key);
+  const KounslrTag({Key? key, this.color}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,6 +1,6 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonMethods {
+class KounslrMethods {
   /// Defocuses a textfield
   static void defocusTextfield(BuildContext context) => FocusScope.of(context).requestFocus(new FocusNode());
 

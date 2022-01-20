@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
@@ -12,7 +12,7 @@ const Duration _kExpand = Duration(milliseconds: 200);
 /// This widget is typically used with [ListView] to create an
 /// "expand / collapse" list entry. When used with scrolling widgets like
 /// [ListView], a unique [PageStorageKey] must be specified to enable the
-/// [CantonExpansionTile] to save and restore its expanded state when it is scrolled
+/// [KounslrExpansionTile] to save and restore its expanded state when it is scrolled
 /// in and out of view.
 ///
 /// See also:
@@ -21,11 +21,11 @@ const Duration _kExpand = Duration(milliseconds: 200);
 ///    expansion tile represents a sublist.
 ///  * The "Expand/collapse" section of
 ///    <https://material.io/guidelines/components/lists-controls.html>.
-class CantonExpansionTile extends StatefulWidget {
+class KounslrExpansionTile extends StatefulWidget {
   /// Creates a single-line [ListTile] with a trailing button that expands or collapses
   /// the tile to reveal or hide the [children]. The [initiallyExpanded] property must
   /// be non-null.
-  const CantonExpansionTile({
+  const KounslrExpansionTile({
     Key? key,
     this.headerBackgroundColor,
     this.leading,
@@ -82,10 +82,10 @@ class CantonExpansionTile extends StatefulWidget {
   final EdgeInsetsGeometry? childrenPadding;
 
   @override
-  _CantonExpansionTileState createState() => _CantonExpansionTileState();
+  _KounslrExpansionTileState createState() => _KounslrExpansionTileState();
 }
 
-class _CantonExpansionTileState extends State<CantonExpansionTile> with SingleTickerProviderStateMixin {
+class _KounslrExpansionTileState extends State<KounslrExpansionTile> with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeOutTween = CurveTween(curve: Curves.easeOut);
   static final Animatable<double> _easeInTween = CurveTween(curve: Curves.easeIn);
   static final Animatable<double> _halfTween = Tween<double>(begin: 0.0, end: 0.5);
@@ -151,8 +151,8 @@ class _CantonExpansionTileState extends State<CantonExpansionTile> with SingleTi
           BoxDecoration(
             color: _backgroundColor.value ?? Colors.transparent,
             border: Border(
-              top: BorderSide(color: CantonColors.transparent),
-              bottom: BorderSide(color: CantonColors.transparent),
+              top: BorderSide(color: KounslrColors.transparent),
+              bottom: BorderSide(color: KounslrColors.transparent),
             ),
           ),
       child: Column(

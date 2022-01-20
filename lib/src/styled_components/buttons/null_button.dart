@@ -1,12 +1,12 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonNullButton extends StatelessWidget {
-  const CantonNullButton();
+class KounslrNullButton extends StatelessWidget {
+  const KounslrNullButton();
 
   @override
   Widget build(BuildContext context) {
-    return CantonHeaderButton(
-      backgroundColor: CantonColors.transparent,
+    return KounslrHeaderButton(
+      backgroundColor: KounslrColors.transparent,
       icon: Container(),
     );
   }

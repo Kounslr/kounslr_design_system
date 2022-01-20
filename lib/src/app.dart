@@ -1,7 +1,7 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CantonApp extends StatelessWidget {
+class KounslrApp extends StatelessWidget {
   final String? title;
   final Widget? home;
   final Color? primaryLightColor;
@@ -12,13 +12,13 @@ class CantonApp extends StatelessWidget {
   final Widget Function(BuildContext, Widget?)? builder;
   final ThemeData? lightTheme, darkTheme;
 
-  const CantonApp({
+  const KounslrApp({
     required this.title,
     required this.home,
     required this.primaryLightColor,
     required this.primaryDarkColor,
-    this.primaryLightVariantColor = CantonColors.blue,
-    this.primaryDarkVariantColor = CantonDarkColors.blue,
+    this.primaryLightVariantColor = KounslrColors.blue,
+    this.primaryDarkVariantColor = KounslrDarkColors.blue,
     this.navigatorObservers,
     this.builder,
     this.lightTheme,
@@ -36,14 +36,14 @@ class CantonApp extends StatelessWidget {
           themeMode: repo.themeMode,
           navigatorObservers: navigatorObservers ?? [],
           theme: lightTheme ??
-              cantonLightTheme().copyWith(
+              kounslrLightTheme().copyWith(
                 primaryColor: primaryLightColor,
-                colorScheme: cantonLightTheme().colorScheme.copyWith(primaryVariant: primaryLightVariantColor),
+                colorScheme: kounslrLightTheme().colorScheme.copyWith(primaryVariant: primaryLightVariantColor),
               ),
           darkTheme: darkTheme ??
-              cantonDarkTheme().copyWith(
+              kounslrDarkTheme().copyWith(
                 primaryColor: primaryDarkColor,
-                colorScheme: cantonDarkTheme().colorScheme.copyWith(primaryVariant: primaryDarkVariantColor),
+                colorScheme: kounslrDarkTheme().colorScheme.copyWith(primaryVariant: primaryDarkVariantColor),
               ),
           home: home,
           builder: builder,

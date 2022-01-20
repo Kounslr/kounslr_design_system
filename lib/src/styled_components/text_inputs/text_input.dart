@@ -1,7 +1,7 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 import 'package:flutter/services.dart';
 
-class CantonTextInput extends StatelessWidget {
+class KounslrTextInput extends StatelessWidget {
   final TextInputType? textInputType;
   final String? hintText, labelText;
   final Widget? prefixIcon, suffixIcon;
@@ -18,7 +18,7 @@ class CantonTextInput extends StatelessWidget {
   final Color? containerColor;
   final List<TextInputFormatter>? formatters;
 
-  const CantonTextInput({
+  const KounslrTextInput({
     this.textInputType,
     this.containerColor,
     this.hintText,
@@ -39,7 +39,7 @@ class CantonTextInput extends StatelessWidget {
     this.formatters,
   });
 
-  CantonTextInput copyWith({
+  KounslrTextInput copyWith({
     TextInputType? textInputType,
     String? hintText,
     String? labelText,
@@ -59,7 +59,7 @@ class CantonTextInput extends StatelessWidget {
     Color? containerColor,
     List<TextInputFormatter>? formatters,
   }) {
-    return CantonTextInput(
+    return KounslrTextInput(
       obscureText: obscureText ?? this.obscureText,
       controller: controller ?? this.controller,
       onChanged: onChanged ?? this.onChanged,

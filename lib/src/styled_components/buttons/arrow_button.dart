@@ -1,13 +1,13 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonArrowButton extends StatelessWidget {
-  const CantonArrowButton({Key? key, required this.view}) : super(key: key);
+class KounslrArrowButton extends StatelessWidget {
+  const KounslrArrowButton({Key? key, required this.view}) : super(key: key);
 
   final Widget view;
 
   @override
   Widget build(BuildContext context) {
-    return CantonActionButton(
+    return KounslrActionButton(
       padding: EdgeInsets.zero,
       alignment: MainAxisAlignment.end,
       icon: Icon(
@@ -16,7 +16,7 @@ class CantonArrowButton extends StatelessWidget {
         color: Theme.of(context).primaryColor,
       ),
       onPressed: () {
-        CantonMethods.viewTransition(context, view);
+        KounslrMethods.viewTransition(context, view);
       },
     );
   }

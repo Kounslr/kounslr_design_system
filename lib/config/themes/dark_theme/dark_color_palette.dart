@@ -1,12 +1,12 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Essentially it's the github/primer color palette with a few modifications
-/// that I'm creating here. It says CantonColors just to make it easier for me
+/// that I'm creating here. It says KounslrColors just to make it easier for me
 /// to reference however all credit goes to the Primer Design System.
 
-class CantonDarkColors {
+class KounslrDarkColors {
   static const MaterialColor gray = MaterialColor(
     0xFF636e7b,
     <int, Color>{

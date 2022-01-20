@@ -1,7 +1,7 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonHeaderButton extends StatelessWidget {
-  const CantonHeaderButton({
+class KounslrHeaderButton extends StatelessWidget {
+  const KounslrHeaderButton({
     Key? key,
     this.backgroundColor,
     this.icon,
@@ -19,10 +19,10 @@ class CantonHeaderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton(
+    return KounslrPrimaryButton(
       color: [false].contains(isClear)
           ? Theme.of(context).colorScheme.secondary
-          : backgroundColor ?? CantonColors.transparent,
+          : backgroundColor ?? KounslrColors.transparent,
       containerHeight: size ?? 55.0,
       containerWidth: size ?? 55.0,
       borderRadius: radius ??

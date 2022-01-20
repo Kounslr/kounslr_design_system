@@ -1,4 +1,4 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
 class ViewHeaderTwo extends StatelessWidget {
   final String? title;
@@ -23,14 +23,14 @@ class ViewHeaderTwo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         ![null, false].contains(backButton)
-            ? CantonBackButton(
+            ? KounslrBackButton(
                 isClear: isBackButtonClear ?? true,
                 onPressed: () {
                   backButtonFunction != null ? backButtonFunction!() : DoNothingAction();
                   Navigator.pop(context);
                 },
               )
-            : buttonOne ?? CantonNullButton(),
+            : buttonOne ?? KounslrNullButton(),
         Text(
           title!,
           style: Theme.of(context)
@@ -38,7 +38,7 @@ class ViewHeaderTwo extends StatelessWidget {
               .headline5!
               .copyWith(color: textColor ?? Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w600),
         ),
-        buttonTwo ?? CantonNullButton()
+        buttonTwo ?? KounslrNullButton()
       ],
     );
   }

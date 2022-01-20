@@ -1,4 +1,4 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
 String kFontFamily = 'Inter';
 
@@ -9,7 +9,7 @@ double kLineHeightTwo = 1.5;
 double kDefaultBorderRadius = 15.0;
 
 bool isDarkMode(BuildContext context) {
-  if (Theme.of(context).colorScheme == CantonDarkColors.colorScheme) {
+  if (Theme.of(context).colorScheme == KounslrDarkColors.colorScheme) {
     return true;
   } else {
     return false;
@@ -18,8 +18,8 @@ bool isDarkMode(BuildContext context) {
 
 Color? lightDarkModeDefaultTextColor(ThemeData themeData) {
   if (themeData.brightness == Brightness.dark) {
-    return CantonColors.white;
+    return KounslrColors.white;
   } else {
-    return CantonColors.black;
+    return KounslrColors.black;
   }
 }

@@ -1,14 +1,14 @@
-import '../../../canton_design_system.dart';
+import '../../../kounslr_design_system.dart';
 
-class CantonBackButton extends StatelessWidget {
+class KounslrBackButton extends StatelessWidget {
   final bool? isClear;
   final void Function()? onPressed;
-  const CantonBackButton({this.isClear, this.onPressed});
+  const KounslrBackButton({this.isClear, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton(
-      color: [null, false].contains(isClear) ? Theme.of(context).colorScheme.secondary : CantonColors.transparent,
+    return KounslrPrimaryButton(
+      color: [null, false].contains(isClear) ? Theme.of(context).colorScheme.secondary : KounslrColors.transparent,
       containerHeight: 60.0,
       containerWidth: 60.0,
       borderRadius: SmoothBorderRadius.all(

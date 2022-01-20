@@ -1,4 +1,4 @@
-library canton_design_system;
+library kounslr_design_system;
 
 // Packages
 export 'package:flutter/material.dart';
@@ -26,9 +26,3 @@ export 'models/models.dart';
 export 'src/styled_components/styled_components.dart';
 export 'src/methods.dart';
 export 'src/app.dart';
-
-// Assets
-export 'assets/icons/iconly_icon.dart';
-export 'assets/icons/iconly_bold.dart';
-export 'assets/icons/iconly_line.dart';
-export 'assets/icons/iconly_curved.dart';

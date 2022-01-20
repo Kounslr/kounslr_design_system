@@ -1,4 +1,4 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/foundation.dart';
@@ -9,8 +9,8 @@ const EdgeInsets _kBackgroundButtonPadding = EdgeInsets.symmetric(
   horizontal: 64.0,
 );
 
-class CantonPrimaryButton extends StatefulWidget {
-  const CantonPrimaryButton({
+class KounslrPrimaryButton extends StatefulWidget {
+  const KounslrPrimaryButton({
     Key? key,
     this.prefixIcon,
     this.suffixIcon,
@@ -50,7 +50,7 @@ class CantonPrimaryButton extends StatefulWidget {
   bool get enabled => onPressed != null;
 
   @override
-  _CantonPrimaryButtonState createState() => _CantonPrimaryButtonState();
+  _KounslrPrimaryButtonState createState() => _KounslrPrimaryButtonState();
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -59,7 +59,7 @@ class CantonPrimaryButton extends StatefulWidget {
   }
 }
 
-class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTickerProviderStateMixin {
+class _KounslrPrimaryButtonState extends State<KounslrPrimaryButton> with SingleTickerProviderStateMixin {
   static const Duration kFadeOutDuration = Duration(milliseconds: 10);
   static const Duration kFadeInDuration = Duration(milliseconds: 100);
   final Tween<double> _opacityTween = Tween<double>(begin: 1.0);
@@ -80,7 +80,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTi
   }
 
   @override
-  void didUpdateWidget(CantonPrimaryButton old) {
+  void didUpdateWidget(KounslrPrimaryButton old) {
     super.didUpdateWidget(old);
     _setTween();
   }
@@ -159,7 +159,7 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTi
               color: enabled
                   ? (widget.textColor ??
                       (widget.color!.value == Theme.of(context).primaryColor.value
-                          ? CantonColors.white
+                          ? KounslrColors.white
                           : Theme.of(context).colorScheme.primary))
                   : Theme.of(context).colorScheme.secondaryVariant,
             ),
@@ -200,10 +200,10 @@ class _CantonPrimaryButtonState extends State<CantonPrimaryButton> with SingleTi
                 height: widget.containerHeight ?? 55.0,
                 width: widget.containerWidth ?? size.width,
                 padding: widget.padding ??
-                    ((![CantonColors.transparent, null].contains(widget.color))
+                    ((![KounslrColors.transparent, null].contains(widget.color))
                         ? _kButtonPadding
                         : _kBackgroundButtonPadding),
-                child: (![CantonColors.transparent, null].contains(widget.color))
+                child: (![KounslrColors.transparent, null].contains(widget.color))
                     ? Row(
                         mainAxisAlignment: widget.alignment ?? MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,

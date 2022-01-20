@@ -1,13 +1,13 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonScaffold extends StatelessWidget {
+class KounslrScaffold extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavBar;
   final EdgeInsets? padding;
   final Color? backgroundColor;
   final bool? resizeToAvoidBottomInset, safeArea;
 
-  const CantonScaffold({
+  const KounslrScaffold({
     Key? key,
     this.body,
     this.bottomNavBar,
@@ -35,7 +35,7 @@ class CantonScaffold extends StatelessWidget {
     }
 
     return GestureDetector(
-      onTap: () => CantonMethods.defocusTextfield(context),
+      onTap: () => KounslrMethods.defocusTextfield(context),
       child: Scaffold(
         resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
         bottomNavigationBar: bottomNavBar,
@@ -46,14 +46,14 @@ class CantonScaffold extends StatelessWidget {
   }
 }
 
-class CantonScaffoldType2 extends StatelessWidget {
+class KounslrScaffoldType2 extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavBar;
   final EdgeInsets? padding;
   final Color? backgroundColor;
   final bool? resizeToAvoidBottomInset, safeArea;
 
-  const CantonScaffoldType2({
+  const KounslrScaffoldType2({
     Key? key,
     this.body,
     this.bottomNavBar,
@@ -66,7 +66,7 @@ class CantonScaffoldType2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => CantonMethods.defocusTextfield(context),
+      onTap: () => KounslrMethods.defocusTextfield(context),
       child: SafeArea(
         child: Container(
           padding: padding ?? const EdgeInsets.symmetric(horizontal: 17),

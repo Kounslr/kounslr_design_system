@@ -1,9 +1,9 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonSmoothBorder {
+class KounslrSmoothBorder {
   static SmoothRectangleBorder defaultBorder({BorderSide? side}) {
     return SmoothRectangleBorder(
-      side: side ?? BorderSide(color: CantonColors.transparent),
+      side: side ?? BorderSide(color: KounslrColors.transparent),
       borderRadius: SmoothBorderRadius.all(
         SmoothRadius(cornerRadius: 12, cornerSmoothing: 1),
       ),
@@ -12,7 +12,7 @@ class CantonSmoothBorder {
 
   static SmoothRectangleBorder largeBorder({BorderSide? side}) {
     return SmoothRectangleBorder(
-      side: side ?? BorderSide(color: CantonColors.transparent),
+      side: side ?? BorderSide(color: KounslrColors.transparent),
       borderRadius: SmoothBorderRadius.all(
         SmoothRadius(cornerRadius: 17, cornerSmoothing: 1),
       ),
@@ -21,7 +21,7 @@ class CantonSmoothBorder {
 
   static SmoothRectangleBorder smallBorder({BorderSide? side}) {
     return SmoothRectangleBorder(
-      side: side ?? BorderSide(color: CantonColors.transparent),
+      side: side ?? BorderSide(color: KounslrColors.transparent),
       borderRadius: SmoothBorderRadius.all(
         SmoothRadius(cornerRadius: 7, cornerSmoothing: 1),
       ),
@@ -36,7 +36,7 @@ class CantonSmoothBorder {
     BorderSide? side,
   }) {
     return SmoothRectangleBorder(
-      side: side ?? BorderSide(color: CantonColors.transparent),
+      side: side ?? BorderSide(color: KounslrColors.transparent),
       borderRadius: SmoothBorderRadius.only(
         topLeft: SmoothRadius(cornerRadius: topLeft ?? 0, cornerSmoothing: 1),
         topRight: SmoothRadius(cornerRadius: topRight ?? 0, cornerSmoothing: 1),

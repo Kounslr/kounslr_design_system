@@ -1,6 +1,6 @@
-import 'package:canton_design_system/canton_design_system.dart';
+import 'package:kounslr_design_system/kounslr_design_system.dart';
 
-class CantonActionButton extends StatelessWidget {
+class KounslrActionButton extends StatelessWidget {
   final Widget icon;
   final Color? iconColor;
   final double? iconSize, containerWidth, containerHeight;
@@ -8,7 +8,7 @@ class CantonActionButton extends StatelessWidget {
   final MainAxisAlignment? alignment;
   final void Function()? onPressed;
 
-  const CantonActionButton({
+  const KounslrActionButton({
     required this.icon,
     required this.onPressed,
     this.iconColor,
@@ -21,10 +21,10 @@ class CantonActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonPrimaryButton(
+    return KounslrPrimaryButton(
       prefixIcon: icon,
       borderRadius: SmoothBorderRadius.zero,
-      color: CantonColors.transparent,
+      color: KounslrColors.transparent,
       alignment: alignment ?? MainAxisAlignment.center,
       containerWidth: containerWidth ?? 40,
       containerHeight: containerHeight ?? 40,

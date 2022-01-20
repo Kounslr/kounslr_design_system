@@ -1,4 +1,4 @@
-import '../../../canton_design_system.dart';
+import '../../../kounslr_design_system.dart';
 
 class SquircleBorder extends ShapeBorder {
   final BorderSide side;
